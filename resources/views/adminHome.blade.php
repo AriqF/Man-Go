@@ -9,7 +9,7 @@
                     Dashboard
                 </div>
                 <div class="card-body">
-                    Anda Adalah Admin
+                    Anda Adalah {{Auth::user()->name}}
                 </div>
             </div>
         </div>

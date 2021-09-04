@@ -61,6 +61,27 @@
                             </div>
                         </div>
 
+
+                        {{-- ini kalo mau buat daftar admin /user --}}
+
+                        {{-- <div class="form-group row">
+                            <label for="user" class="col-md-4 col-form-label">Hak akses</label>
+                            <div class="col-md-6">
+                                <select name="is_admin">
+                                    <option value="KOSONG">---Pilih Akses---</option>
+                                    <option value="1">Admin</option>
+                                    <option value="0">User</option>
+                                </select>
+                            </div>
+                        </div> --}}
+
+
+
+
+                        {{-- ini daftar auto jadi user --}}
+                        
+                        <input type="hidden" class="form-control" name="is_admin" value="0">
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

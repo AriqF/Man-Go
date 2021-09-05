@@ -15,6 +15,14 @@
                     @endif
                     Anda Adalah {{Auth::user()->name}}
                 </div>
+                
+                {{-- Tombol Logout --}}
+                <div class="card-body">
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

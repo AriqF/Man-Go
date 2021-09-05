@@ -20,7 +20,7 @@
                 <div class="card-body">
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
-                        <button type="submit">Logout</button>
+                        <button type="submit" class="btn btn-link p-0 m-0 align-baseline">Logout</button>
                     </form>
                 </div>
             </div>

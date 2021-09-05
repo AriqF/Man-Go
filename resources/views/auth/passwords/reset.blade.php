@@ -4,7 +4,7 @@
 <div class="auth-container container">
     <div class="row justify-content-center">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            <img class="img-fluid align-items-center" src="{{ asset('img/reset.jpg') }}">
+            <img class="img-fluid align-items-center" src="{{ asset('img/reset.png') }}">
         </div> 
         
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">

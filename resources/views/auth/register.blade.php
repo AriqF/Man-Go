@@ -4,7 +4,7 @@
 <div class="auth-container container">
     <div class="row justify-content-center">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            <img class="img-fluid align-items-center" src="{{ asset('img/login.jpg') }}">
+            <img class="img-fluid align-items-center" src="{{ asset('img/login.png') }}">
         </div> 
         
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -21,13 +21,26 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="form-floating mb-3">
-                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="nama" value="{{ old('name') }}" required autocomplete="name" autofocus>            
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <input id="fname" type="text" class="form-control @error('lname') is-invalid @enderror" name="fname" placeholder="nama depan" value="{{ old('fname') }}" required autocomplete="fname" autofocus>            
+                                    @error('fname')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <input id="lname" type="text" class="form-control @error('lname') is-invalid @enderror" name="lname" placeholder="nama belakang" value="{{ old('lname') }}" required autocomplete="name" autofocus>            
+                                    @error('lname')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
                         </div>
+
                         <div class="form-floating mb-3">
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="example@mail.com" value="{{ old('email') }}" required autocomplete="email" autofocus>            
                             @error('email')

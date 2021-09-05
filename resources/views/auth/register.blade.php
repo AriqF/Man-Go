@@ -23,16 +23,16 @@
                         <div class="form-floating mb-3">
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                    <input id="fname" type="text" class="form-control @error('lname') is-invalid @enderror" name="fname" placeholder="nama depan" value="{{ old('fname') }}" required autocomplete="fname" autofocus>            
-                                    @error('fname')
+                                    <input id="first_name" type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" placeholder="nama depan" value="{{ old('first_name') }}" required autocomplete="first_name" autofocus>            
+                                    @error('first_name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                    <input id="lname" type="text" class="form-control @error('lname') is-invalid @enderror" name="lname" placeholder="nama belakang" value="{{ old('lname') }}" required autocomplete="name" autofocus>            
-                                    @error('lname')
+                                    <input id="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" placeholder="nama belakang" value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>            
+                                    @error('last_name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -49,7 +49,7 @@
                             @enderror
                         </div>
                         <div class="form-floating mb-3">
-                            <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" placeholder="username" value="{{ old('username') }}" required autocomplete="username" autofocus>            
+                            <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="name" placeholder="username" value="{{ old('username') }}" required autocomplete="name" autofocus>            
                             @error('username')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -72,6 +72,8 @@
                             </span>
                             @enderror
                         </div>
+
+                        <input type="hidden" class="form-control" name="is_admin" value="0">
                         
                         <div class="d-grid">
                             <button class="btn-auth" href="{{ __('Register') }}" type="submit">Daftar</button>

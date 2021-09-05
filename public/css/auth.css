@@ -10,10 +10,16 @@ body {
     .auth-container{
         padding: 50px;
     }
+    .auth-head{
+        margin-top: 30px;
+    }
 }
 @media (min-width: 993px){
     .auth-container{
         padding: 70px;
+    }
+    .auth-head{
+        margin-top: 60px;
     }
 }
 

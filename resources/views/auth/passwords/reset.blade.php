@@ -16,7 +16,7 @@
                             <p></p>
                         </div>
                       </div>
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" class="form-auth">
                         @csrf
                         {{--<input type="hidden" name="token" value="{{ $token }}">--}}
 

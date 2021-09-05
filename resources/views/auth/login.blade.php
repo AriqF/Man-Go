@@ -12,13 +12,13 @@
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                     <div class="row auth-head">
                         <div class="col align-self-start text-left">
-                            <h4>Masuk</h4>
+                            <h3>Masuk</h3>
                         </div>
                         <div class="col align-self-end text-right">
                             <p class="auth-choc">atau <a href="{{ route('register') }}">Buat Akun</a></p>
                         </div>
                       </div>
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login') }}" class="form-auth">
                         @csrf
                         <div class="form-floating mb-3">
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="example@mail.com" value="{{ old('email') }}" required autocomplete="email" autofocus>            

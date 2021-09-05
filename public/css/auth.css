@@ -17,7 +17,10 @@ body {
         padding: 50px;
     }
     .auth-head{
-        margin-top: 30px;
+        margin-top: 10px;
+    }
+    .auth-head-reg{
+        margin-top: 20px;
     }
 }
 @media (min-width: 993px){
@@ -25,10 +28,15 @@ body {
         padding: 70px;
     }
     .auth-head{
-        margin-top: 80px;
+        margin-top: 90px;
+    }
+    .auth-head-reg{
+        margin-top: 25px;
     }
 }
-
+.form-auth{
+    margin-top: -20px;
+}
 nav{
     box-shadow: 2px 12px 5px -8px rgba(96,85,85,0.41);
     -webkit-box-shadow: 2px 12px 5px -8px rgba(96,85,85,0.41);

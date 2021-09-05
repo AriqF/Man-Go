@@ -1,0 +1,60 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+@media (min-width: 320px) and (max-width: 575px){
+    .auth-container{
+        padding: 30px;
+    }
+}
+@media (min-width: 576px) and (max-width: 992px){
+    .auth-container{
+        padding: 50px;
+    }
+}
+@media (min-width: 993px){
+    .auth-container{
+        padding: 70px;
+    }
+}
+
+nav{
+    box-shadow: 2px 12px 5px -8px rgba(96,85,85,0.41);
+    -webkit-box-shadow: 2px 12px 5px -8px rgba(96,85,85,0.41);
+    -moz-box-shadow: 2px 12px 5px -8px rgba(96,85,85,0.41);
+}
+.card{
+    box-shadow: 17px 17px 5px -10px rgba(254,244,244,0.27);
+    -webkit-box-shadow: 17px 17px 5px -10px rgba(254,244,244,0.27);
+    -moz-box-shadow: 17px 17px 5px -10px rgba(254,244,244,0.27);
+}
+
+.form-floating {
+    margin-top: 24px;
+}
+.form-floating input{
+    font-size: 16px;
+}
+
+input{
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-auth {
+    background-color: #0096fa;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.08rem;
+    width: 100%;
+    margin-top: 18px;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.btn-auth:hover{
+    background-color: #0081D7;
+    transition: background-color 0.3s;
+    
+}
+

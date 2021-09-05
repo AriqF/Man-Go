@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <title>Belajar Bahasa Mudah dan Praktis</title>
-        @extends('layouts.master')
+        @section('title', 'Welcome - ManGo')
+        @extends('layouts.index-master')
         <link rel="stylesheet" href="{{ asset('css/index.css') }}" type="text/css"> 
     </head>
     <body style="background-color: #F2F2F2;">

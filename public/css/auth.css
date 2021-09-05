@@ -1,5 +1,11 @@
 body {
     font-family: 'Poppins', sans-serif;
+    /*light mode. komen salah satu*/
+    /* background-color: #efeff1;
+    color: #151516;  */
+    /*dark mode*/
+    background-color: #1c194d; 
+    color: #fff; 
 }
 @media (min-width: 320px) and (max-width: 575px){
     .auth-container{
@@ -19,7 +25,7 @@ body {
         padding: 70px;
     }
     .auth-head{
-        margin-top: 60px;
+        margin-top: 80px;
     }
 }
 
@@ -60,7 +66,6 @@ input{
 }
 .btn-auth:hover{
     background-color: #0081D7;
-    transition: background-color 0.3s;
-    
+    transition: background-color 0.3s;   
 }
 

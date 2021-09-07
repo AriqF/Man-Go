@@ -22,8 +22,8 @@ Route::get('/confirm', function () {
 });
 
 
-
-Auth::routes();
+Auth::routes(['verify' => true]); //untuk verifikasi email
+//Auth::routes();
 
 Route::get('adminHome', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('adminHome')->middleware('is_admin');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -4,7 +4,7 @@
 <div class="auth-container container">
     <div class="row justify-content-center">
         <div class="col-md-7">
-            <img class="img-fluid align-items-center w-75" src="{{ asset('img/mail.jpg') }}">
+            <img class="img-fluid align-items-center w-75" src="{{ asset('img/mail.png') }}">
             <h3>Verifikasi Email</h3>
             <hr>
             @if (session('resent'))

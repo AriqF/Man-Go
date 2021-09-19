@@ -1,6 +1,6 @@
 
 <!--navbar here-->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #343090; font-family: 'Maven Pro', sans-serif;">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #da5e0b; font-family: 'Maven Pro', sans-serif;">
     <a class="navbar-brand" href="#" style="font-family: 'Poppins', sans-serif; font-size: 1.5em">ManGo</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -42,6 +42,9 @@
     </div>
 </nav>
 @yield('mainContent')
+@extends('layouts.footer') 
+    {{-- anime js --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 </body>
-
 </html>

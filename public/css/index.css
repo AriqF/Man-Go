@@ -1,12 +1,13 @@
+html{
+    scroll-behavior: smooth;
+}
 .pagehead{
     width: 100%;
-    height: 80vh;
+    height: 88vh;
+    background-image: url("../img/japan.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-#bg-index{
-    background-image: url("../img/japan.jpg");
 }
 .page-title{
     color: #fff;
@@ -17,10 +18,32 @@
 .nav-link{
     font-size: 18px;
 }
+.page-section{
+    background-color: #FBFCFE;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    padding: 65px;
+    padding-bottom: 18px;
+}
+.info-sub-container{
+    padding: 52px;
+}
+.info-img-container{
+    padding: 12px;
+}
+.info-img-container img{
+    width: 12rem;
+    height: 12rem;
+}
 
-/*btn*/
+.info-img-text p{
+    font-size: 18px;
+    text-align: left;
+}
+
+/*utility*/
 .btn-explore{
-    background-color: #4B10EE;
+    background-color: #ffa500;
     border-radius: 8px;
     color: #F4EFF9;
     font-family: 'Poppins', sans-serif;
@@ -29,12 +52,13 @@
     margin-right: 3px; 
     margin-left: 3px;
     border: none;
+    transition: background-color 0.1s ease-in-out;
 }
 .btn-explore:hover{
     text-decoration: none;
     color: #F4EFF9;
-    background-color: #3406b3;
-    transition: background-color 0.5s;
+    background-color: #cc8500;
+
 }
 .btn-register{
     background-color: #F8485E;
@@ -60,6 +84,17 @@
     background-color: #EF2D45;
     transition: background-color 0.5s;
 }
+
+.box{
+    padding: 12px;
+    background-color: #F4EFF9;
+    border-radius: 8px;
+    border: 1px solid #000;
+}
+.mb-row{
+    margin-bottom: 32px;
+}
+
 @media (min-width: 576px) and (max-width: 992px) {
     .btn-register, .btn-login{
         margin: 0 !important;

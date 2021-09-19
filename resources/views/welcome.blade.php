@@ -9,21 +9,59 @@
     <!--extends navbar-->
     @extends('layouts.indexLayout')
     @section('mainContent')
-    <header class="pagehead" id="bg-index">
+    <header class="pagehead">
         <div class="container h-100">
             <div class="d-flex bd-highlight h-100 align-items-center">
                 <div class="p-2 flex-fill bd-highlight text-left">
-                    <h1 class="page-title">Belajar Bahasa Mudah, <br> Praktis, dan Efektif</h1>
-                    <a href="#main-section" class="btn-explore js-scroll-trigger" role="button" id="btn-exp">Jelajahi</a>
+                    <h1 class="page-title">Belajar Bahasa Jepang Mudah, <br> Praktis, dan Efektif</h1>
+                    <a href="#info-section" class="btn-explore js-scroll-trigger" role="button" id="btn-exp">Jelajahi</a>
                 </div>
 
             </div>
         </div>
     </header>
-    <section class="page-section info-section" id="main-section">
-        <div class="container-fluid">
-            
-        </div>
-    </section>
+    
 
-    @endsection   
+    <div class="page-section container-fluid text-center" id="info-section">
+        <div class="info-container">
+            <h2>Siap Belajar di ManGo?</h2>
+            <div class="info-sub-container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-xs-12 info-box">
+                        <div class="info-img-container" id="img1">
+                            <img src="{{asset('img/progress.png')}}" class="img-fluid">
+                        </div>
+                        <div class="info-header-container">
+                            <h4>Ketahui Target dan Progress-mu!</h4>
+                            <p>Lacak dan ketahui perkembangan belajar-mu melalui grafik interaktif</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-xs-12 info-box">
+                        <div class="info-img-container" id="img2">
+                            <img src="{{asset('img/anywhere.png')}}" class="img-fluid">
+                        </div>
+                        <div class="info-header-container">
+                            <h4>Belajar Dimana Saja dan Kapan Saja</h4>
+                            <p>Dengan aplikasi v-Learning berbasis website ini kamu dapat belajar dimana saja dan kapan saja!</p>
+                        </div>
+
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-xs-12 info-box" >
+
+                       <div class=" info-img-container" id="img3">
+                            <img src="{{asset('img/free.png')}}" class="img-fluid">
+                        </div>
+                        <div class="info-header-container">
+                            <h4>100% Gratis</h4>
+                            <p>Kamu dapat dengan bebas menggunakan aplikasi ini secara gratis tanpa biaya sedikitpun</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    @endsection  

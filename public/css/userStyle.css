@@ -1,0 +1,48 @@
+/* navbar */
+#mainNav{
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: #da5e0b;
+}
+.nav-link{
+    font-size: 18px;
+}
+
+/* page */
+.page-section{
+    padding: 120px;
+}
+.box-container{
+    padding: 20px;
+    margin-bottom: 32px;
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 5px;
+    border: 0.5px solid #E2E2E3;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* button utility */
+.btn-excercise, .btn-learn{
+    padding: 9px 26px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+.btn-excercise{
+    background-color: #da5e0b;
+    color: #fff;
+}
+.btn-excercise:hover{
+    background-color: #C65205;
+}
+.btn-learn{
+    background-color: #ffdfc2;
+    color: #da5e0b;
+}
+.btn-learn:hover{
+    background-color: #F3CEAD;
+}
+

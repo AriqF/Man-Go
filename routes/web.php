@@ -18,11 +18,11 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/confirm', function () {
+Route::get('/test', function () {
     return view('test');
 });
 
-
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes(['verify' => true]); //untuk verifikasi email
 //Auth::routes();
 

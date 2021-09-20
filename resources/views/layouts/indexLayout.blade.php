@@ -1,6 +1,5 @@
-
 <!--navbar here-->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #da5e0b; font-family: 'Maven Pro', sans-serif;">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #da5e0b; font-family: 'Poppins', sans-serif;">
     <a class="navbar-brand" href="#" style="font-family: 'Poppins', sans-serif; font-size: 1.5em">ManGo</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

@@ -21,6 +21,9 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('test');
 });
+Route::get('/profile', function () {
+    return view('user/profile');
+});
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes(['verify' => true]); //untuk verifikasi email

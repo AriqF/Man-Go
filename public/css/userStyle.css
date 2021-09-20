@@ -11,6 +11,7 @@
 /* page */
 .page-section{
     padding: 120px;
+    padding-bottom: 30px;
 }
 .box-container{
     padding: 20px;
@@ -21,9 +22,51 @@
     border: 0.5px solid #E2E2E3;
     font-family: 'Poppins', sans-serif;
 }
+/* profile page */
+#profile-pict{
+    max-width: 100px;
+    border-radius: 8px;
+}
+#nameContainer{
+    margin: 14px;
+}
+#profile-name{
+    color: #3c3c3c;
+    font-size: 28px;
+}
+#profile-fullname{
+    text-transform: capitalize;
+    color: #afafaf;
+    font-size: 15px;
+}
+#profile-fullname, #profile-name{
+    margin-bottom: 4px;
+}
+#join-time{
+    color: #777777;
+    font-size: 13px;
+}
+.profile-link{
+    color: #000;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+.box-container input{
+    margin-bottom: 20px;
+}
+.profile-link i{
+    margin-right: 10px;
+}
+.profile-link:hover{
+    text-decoration: none;
+    color: #da5e0b;
+}
+.menu-active{
+    color: #da5e0b;
+}
 
 /* button utility */
-.btn-excercise, .btn-learn{
+.btn-excercise, .btn-learn, .btn-save{
     padding: 9px 26px;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
@@ -45,4 +88,13 @@
 .btn-learn:hover{
     background-color: #F3CEAD;
 }
+.btn-save{
+    background-color: #da950b;
+    color: #fff;
+}
+.btn-save:hover{
+    background-color: #CC8C0B;
+}
+
+
 

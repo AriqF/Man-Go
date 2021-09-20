@@ -4,10 +4,11 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                <li class="nav-item"><a class="nav-link" href="#">Belajar</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Aksi I</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Aksi II</a></li>
-                <li class="nav-item dropdown">
+                <li class="nav-item"><a class="nav-link {{ (request()->is('home')) ? 'active' : '' }}" href="{{ url('/home') }}">Belajar</a></li>
+                <li class="nav-item"><a class="nav-link {{ (request()->is('stats')) ? 'active' : '' }}" href="{{ url('/stats') }}">Statistik</a></li>
+                <li class="nav-item"><a class="nav-link {{ (request()->is('profile')) ? 'active' : '' }}" href="{{ url('/profile') }}">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url('/logout') }}">Keluar</a></li>
+                {{-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
@@ -20,7 +21,7 @@
                         <a class="dropdown-item" href="{{ url('/profile') }}">Profil</a>
                         <a class="dropdown-item" href="{{ url('/logout') }}">Keluar</a>
                     </div>
-                </li>
+                </li> --}}
             </ul>
         </div>
     </div>

@@ -11,7 +11,7 @@
             <div class="row container-fluid">
                 <div class="col-xl-4 col-md-12">
                     <div class="box-container">
-                        <canvas id="chartProgress"></canvas>
+                        <canvas class="w-100" id="userProgressChart" width="max-content" height="max-content"></canvas>
                     </div>
                     <div class="box-container">
                         <h3 class="text-center" style="margin-bottom: 12px">Ranking </h3>
@@ -109,7 +109,8 @@
                 </div>
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js" crossorigin="anonymous"></script>
+
         <script src="{{asset('js/user.js')}}"></script>
     </body>

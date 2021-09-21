@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\UpdateProfileInformationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,3 +49,5 @@ Auth::routes(['verify' => true]); //untuk verifikasi email
 
 Route::get('adminHome', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('adminHome')->middleware('is_admin');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::put('update', [App\Http\Controllers\UpdateProfileInformationController::class, 'update'])->name('user.update');

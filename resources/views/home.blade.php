@@ -16,13 +16,13 @@
     </head>
     <body style="background-color: #f3f7f7">
         @extends('layouts.user.navLayouts')
-        <div class="page-section">
+        <div class="page-section ">
             <div class="row container-fluid">
                 <div class="col-xl-4 col-md-12">
                     <div class="box-container">
-                        <canvas class="w-100" id="userProgressChart" width="max-content" height="max-content"></canvas>
+                        <canvas class="w-100" id="XPChart" width="max-content" height="max-content"></canvas>
                     </div>
-                    <div class="box-container">
+                    <div class="box-container" id="table-container">
                         <h3 class="text-center" style="margin-bottom: 12px">Ranking </h3>
                         <table class="table">
                             <thead style="background-color: #0b9cda; color: #fff;">
@@ -60,36 +60,17 @@
                     {{--container materi--}}
                     <div class="box-container" id="hi1">
                         <div class="row">
-                            <div class="col-8">
+                            <div class="col-xl-8 col-md-6 col-sm-12 title-container">
                                 <h3>Hiragana I</h3>
-                                <p>Belajar dasar-dasar huruf Hiragana</p>
-                            </div>
-                            <div class="col-4">
-                                <div class="d-flex flex-column bd-highlight mb-3 text-center">
-                                    <div class=" bd-highlight">
-                                        <button class=" btn-excercise">Kerjakan Soal</button>
-                                    </div>
-                                    <div class=" bd-highlight">
-                                        <button class=" btn-learn">Belajar Materi</button>
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="box-container" id="hi2">
-                        <div class="row">
-                            <div class="col-8">
-                                <h3>Hiragana II</h3>
                                 <p>Belajar dasar-dasar huruf Hiragana dan kosa kata dasar</p>
                             </div>
-                            <div class="col-4">
+                            <div class="col-xl-4 col-md-6 col-sm-12">
                                 <div class="d-flex flex-column bd-highlight mb-3 text-center">
                                     <div class=" bd-highlight">
-                                        <button class=" btn-excercise disabled" disabled>Kerjakan Soal</button>
+                                        <a href="#"><button class="btnr btn-excercise"　href="#">Kerjakan Soal</button></a>
                                     </div>
                                     <div class=" bd-highlight">
-                                        <button class=" btn-learn">Belajar Materi</button>
+                                        <a href="{{ url('/hiragana') }}"><button class="btnr btn-learn">Belajar Materi</button></a>
                                     </div>
                                   </div>
                             </div>
@@ -98,22 +79,62 @@
 
                     <div class="box-container" id="ka1">
                         <div class="row">
-                            <div class="col-8">
+                            <div class="col-xl-8 col-md-6 col-sm-12 title-container">
                                 <h3>Katakana I</h3>
-                                <p>Belajar dasar-dasar huruf Katakana</p>
+                                <p>Belajar dasar-dasar huruf Katakana dan kosa kata dasar</p>
                             </div>
-                            <div class="col-4">
+                            <div class="col-xl-4 col-md-6 col-sm-12">
                                 <div class="d-flex flex-column bd-highlight mb-3 text-center">
                                     <div class=" bd-highlight">
-                                        <button class=" btn-excercise disabled" disabled>Kerjakan Soal</button>
+                                        <a href="#"> <button class="btnr btn-excercise disabled" disabled>Kerjakan Soal</button> </a>
                                     </div>
                                     <div class=" bd-highlight">
-                                        <button class=" btn-learn">Belajar Materi</button>
+                                        <a href="{{url('/katakana')}}"> <button class="btnr btn-learn">Belajar Materi</button> </a>
                                     </div>
                                   </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="box-container" id="ak1">
+                        <div class="row">
+                            <div class="col-xl-8 col-md-6 col-sm-12 title-container">
+                                <h3>Angka</h3>
+                                <p>Belajar angka dari 0 sampai dengan ribuan</p>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-sm-12">
+                                <div class="d-flex flex-column bd-highlight mb-3 text-center">
+                                    <div class=" bd-highlight">
+                                        <a href="#">  <button class="btnr btn-excercise disabled" disabled>Kerjakan Soal</button> </a>
+                                    </div>
+                                    <div class=" bd-highlight">
+                                        <a href="#"> <button class="btnr btn-learn">Belajar Materi</button> </a>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-container" id="kj1">
+                        <div class="row">
+                            <div class="col-xl-8 col-md-6 col-sm-12 title-container">
+                                <h3>Kanji</h3>
+                                <p>Pengenalan dasar kanji dan beserta cara membacanya</p>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-sm-12">
+                                <div class="d-flex flex-column bd-highlight mb-3 text-center">
+                                    <div class=" bd-highlight">
+                                        <a href="#">  <button class="btnr btn-excercise disabled" disabled>Kerjakan Soal</button> </a>
+                                    </div>
+                                    <div class=" bd-highlight">
+                                        <a href="#"> <button class="btnr btn-learn">Belajar Materi</button> </a>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+
+
 
                 </div>
             </div>

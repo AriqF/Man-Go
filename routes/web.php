@@ -21,9 +21,26 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('test');
 });
+
+// user page
 Route::get('/profile', function () {
     return view('user/profile');
 });
+Route::get('/change-password', function () {
+    return view('user/change-password');
+});
+Route::get('/stats', function () {
+    return view('user/stats');
+});
+Route::get('/hiragana', function () {
+    return view('user/hiragana');
+});
+Route::get('/katakana', function () {
+    return view('user/katakana');
+});
+
+
+
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes(['verify' => true]); //untuk verifikasi email

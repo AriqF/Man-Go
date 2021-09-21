@@ -40,12 +40,16 @@
                     <div class="box-container">
                         <ul class="list-group" id="profile-menu-list">
                             <li class="list-group-item border-bottom-only "><a href="{{ url('/profile') }}" class="profile-link {{ (request()->is('profile')) ? 'menu-active' : '' }}"><i class="fas fa-user-cog"></i> Profil</a></li>
-                            <li class="list-group-item border-bottom-only "><a href="{{ url('/stats') }}" class="profile-link {{ (request()->is('stats')) ? 'menu-active' : '' }}"><i class="fas fa-chart-line"></i> Statistik</a></li>
                             <li class="list-group-item border-bottom-only "><a href="{{ url('/change-password') }}" class="profile-link {{ (request()->is('change-password')) ? 'menu-active' : '' }}"><i class="fas fa-unlock"></i> Ubah Kata Sandi</a></li>
+                            <li class="list-group-item border-bottom-only "><a href="{{ url('/stats') }}" class="profile-link {{ (request()->is('stats')) ? 'menu-active' : '' }}"><i class="fas fa-chart-line"></i> Statistik</a></li>
                             <li class="list-group-item border-bottom-only"><a href="{{ url('/logout') }}" class="profile-link"><i class="fas fa-sign-out-alt"></i> Keluar</a></li>
                           </ul>
                     </div>
                 </div>
                 @yield('main-content')
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js" crossorigin="anonymous"></script>
+
+    <script src="{{asset('js/user.js')}}"></script>
     </body>
 </html>

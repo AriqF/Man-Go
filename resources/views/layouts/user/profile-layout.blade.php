@@ -3,7 +3,7 @@
     <head>
         @section('title', 'ManGo - Belajar Bahasa Jepang')
         @extends('layouts.index-master')
-        <link rel="stylesheet" href="{{ asset('css/userStyle.css') }}" type="text/css"> 
+        <link rel="stylesheet" href="{{ asset('css/userStyle.css') }}" type="text/css">
         <style>
             .border-bottom-only{
                 border-top: 0 !important;
@@ -23,9 +23,11 @@
                         <div class="profile-container">
                             <div class="d-flex flex-column bd-highlight align-items-center" style="margin-bottom: 0 !important">
                                 <div class=" bd-highlight">
+                                    <form action="{{ route('user.update') }}" method="POST" enctype="multipart/form-data">
                                     <div  id="pictContainer">
-                                        <img src="{{asset('img/man.png')}}" class="img-fluid" id="profile-pict">
+                                        <img src="{{Auth::user()->getImage()}}" class="img-fluid" id="profile-pict">
                                     </div>
+                                </form>
                                 </div>
                                 <div class="bd-highlight">
                                     <div id="nameContainer" class="text-center">

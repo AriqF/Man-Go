@@ -7,7 +7,7 @@
 
                     @endif
                     <div class="box-container">
-                        <form action="{{ route('user.update') }}" method="POST">
+                        <form action="{{ route('user.update') }}" method="POST" enctype="multipart/form-data">
                             @method("put")
                             @csrf
                             <label class="form-label" for="name">Username</label>
@@ -29,8 +29,13 @@
                             </div>
                             <label class="form-label" for="email">Alamat Email</label>
                             <input id="email" type="text" class="form-control" name="email" value="{{Auth::user()->email}}" readonly>
-                            {{-- <label for="imageUpload">Ubah Foto Profil</label>
-                            <input required name="profilePict" type="file"  class="form-control-file mb-2 file-input" id="imageUpload" style="cursor: pointer;"> --}}
+                            <label for="image">Ubah Foto Profil</label>
+                            <input required name="image" type="file"  class="form-control-file mb-2 file-input" id="image" style="cursor: pointer;">
+                            @error('image')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                             <div class="d-grid">
                                 <div class="row">
                                     <div class="col-md-12 text-center">

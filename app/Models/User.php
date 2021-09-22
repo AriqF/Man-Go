@@ -24,6 +24,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'email',
         'password',
         'is_admin',
+        'image',
     ];
 
     /**
@@ -44,4 +45,15 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //fungsi untuk mengakali foto default profile
+    public function getImage()
+    {
+        if(!$this->image)
+        {
+            return asset('img/man.png');
+        }
+
+        return asset('storage/' .$this->image);
+    }
 }

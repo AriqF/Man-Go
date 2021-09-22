@@ -30,7 +30,7 @@
                             <label class="form-label" for="email">Alamat Email</label>
                             <input id="email" type="text" class="form-control" name="email" value="{{Auth::user()->email}}" readonly>
                             <label for="image">Ubah Foto Profil</label>
-                            <input required name="image" type="file"  class="form-control-file mb-2 file-input" id="image" style="cursor: pointer;">
+                            <input name="image" type="file"  class="form-control-file mb-2 file-input" id="image" style="cursor: pointer;">
                             @error('image')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

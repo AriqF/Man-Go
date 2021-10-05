@@ -1,0 +1,60 @@
+/* button utility */
+.btnr{
+    padding: 9px 26px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    text-decoration: none;
+}
+.btnr:hover{
+    text-decoration: none;
+}
+.btn-excercise{
+    background-color: #da5e0b;
+    color: #fff;
+}
+.btn-excercise:hover{
+    background-color: #C65205;
+}
+.btn-learn{
+    background-color: #ffdfc2;
+    color: #da5e0b;
+}
+.btn-learn:hover{
+    background-color: #F3CEAD;
+}
+.btn-save{
+    background-color: #da950b;
+    color: #fff;
+}
+.btn-save:hover{
+    background-color: #CC8C0B;
+}
+.btn-send{
+    background-color: #086d99;
+    color: #fff;
+}
+.btn-send:hover{
+    background-color: #07658D;
+}
+
+/* card utility */
+.card-aqua{
+    border-left: 0.25rem solid #32CCBC !important;
+}
+.card-pink{
+    border-left: 0.25rem solid #D939CD !important;
+}
+.card-purple{
+    border-left: 0.25rem solid #9708CC !important;
+}
+.card-red{
+    border-left: 0.25rem solid #EA5455 !important;
+}
+
+/* background */
+.bg-custom-dark{
+    background-color: #2C394B !important;
+}

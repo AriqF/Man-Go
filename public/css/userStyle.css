@@ -14,15 +14,6 @@
     padding: 80px;
     padding-bottom: 30px;
 }
-.box-container{
-    padding: 20px;
-    margin-bottom: 32px;
-    background-color: #ffffff;
-    color: #000;
-    border-radius: 5px;
-    border: 0.5px solid #E2E2E3;
-    font-family: 'Poppins', sans-serif;
-}
 /* profile page */
 #profile-pict{
     max-width: 100px;
@@ -52,6 +43,15 @@
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
 }
+.box-container{
+    padding: 20px;
+    margin-bottom: 32px;
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 5px;
+    border: 0.5px solid #E2E2E3;
+    font-family: 'Poppins', sans-serif;
+}
 .box-container input{
     margin-bottom: 20px;
 }
@@ -77,7 +77,7 @@ table img:hover{
     transform: scale(1.14);
 }
 /* responsive settings */
-@media (min-width: 300px) and (max-width: 767px){
+@media (min-width: 200px) and (max-width: 767px){
     .page-section{
         padding: 20px;
         padding-bottom: 0px;
@@ -104,47 +104,7 @@ table img:hover{
         padding-bottom: 0px;
     }
 }
-/* button utility */
-.btnr{
-    padding: 9px 26px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    border: none;
-    border-radius: 6px;
-    margin-bottom: 16px;
-    text-decoration: none;
-}
-.btnr:hover{
-    text-decoration: none;
-}
-.btn-excercise{
-    background-color: #da5e0b;
-    color: #fff;
-}
-.btn-excercise:hover{
-    background-color: #C65205;
-}
-.btn-learn{
-    background-color: #ffdfc2;
-    color: #da5e0b;
-}
-.btn-learn:hover{
-    background-color: #F3CEAD;
-}
-.btn-save{
-    background-color: #da950b;
-    color: #fff;
-}
-.btn-save:hover{
-    background-color: #CC8C0B;
-}
-.btn-send{
-    background-color: #086d99;
-    color: #fff;
-}
-.btn-send:hover{
-    background-color: #07658D;
-}
+
 
 
 

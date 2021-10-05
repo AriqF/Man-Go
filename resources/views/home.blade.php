@@ -4,6 +4,7 @@
         @section('title', 'ManGo - Belajar Bahasa Jepang')
         @extends('layouts.index-master')
         <link rel="stylesheet" href="{{ asset('css/userStyle.css') }}" type="text/css"> 
+        <link rel="stylesheet" href="{{ asset('css/utility.css') }}" type="text/css"> 
         <style>
             .disabled{
                 background-color: #d8d7d5;

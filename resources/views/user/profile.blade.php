@@ -1,5 +1,6 @@
 @extends('layouts.user.profile-layout')
 @section('main-content')
+@section('title', 'ManGo - Profil')
                 {{-- content --}}
                 <div class="col-xl-8 col-md-12">
                     @if (session()->has('message'))

@@ -23,7 +23,7 @@ Route::get('/test', function () {
     return view('test');
 });
 
-// user page
+// user routes
 Route::get('/profile', function () {
     return view('user/profile');
 });
@@ -38,6 +38,14 @@ Route::get('/hiragana', function () {
 });
 Route::get('/katakana', function () {
     return view('user/katakana');
+});
+
+//admin routes
+Route::get('/admin-profile', function () {
+    return view('admin/admin-profile');
+});
+Route::get('/change-admin-password', function () {
+    return view('admin/admin-password');
 });
 
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Alert;
 
 class UpdateProfileInformationController extends Controller
 {
@@ -22,7 +23,7 @@ class UpdateProfileInformationController extends Controller
 
         auth()->user()->update($attr);
 
-        return back()-> with('messsage', 'Your Profile Has Been Updated');
+        return back()-> with('success', 'Your Profile Has Been Updated');
 
     }
 }

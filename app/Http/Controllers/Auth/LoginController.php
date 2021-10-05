@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
 {
@@ -60,7 +61,9 @@ class LoginController extends Controller
         }
 
         else {
-            return redirect()->route('login')->with('error', 'Email atau Password Salah');
+            throw ValidationException::withMessages([
+                'email' => [trans('auth.failed')],
+            ]);
         }
     }
 }

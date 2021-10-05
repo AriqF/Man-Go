@@ -18,7 +18,7 @@
                             <p class="auth-choc">atau <a href="{{ route('register') }}">Buat Akun</a></p>
                         </div>
                       </div>
-                    <form method="POST" action="{{ route('login') }}" class="form-auth">
+                    <form method="POST" action="{{ route('login') }}" class="form-auth needs-validation">
                         @csrf
                         <div class="form-floating mb-3">
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="example@mail.com" value="{{ old('email') }}" required autocomplete="email" autofocus>            

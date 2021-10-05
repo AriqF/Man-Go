@@ -23,6 +23,7 @@ class UpdateProfileInformationController extends Controller
 
         auth()->user()->update($attr);
 
+        //sweet alert
         return back()-> with('success', 'Your Profile Has Been Updated');
 
     }

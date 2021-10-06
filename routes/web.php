@@ -40,6 +40,7 @@ Route::get('/katakana', function () {
     return view('user/katakana');
 });
 
+<<<<<<< Updated upstream
 //admin routes
 Route::get('/admin-profile', function () {
     return view('admin/admin-profile');
@@ -47,6 +48,12 @@ Route::get('/admin-profile', function () {
 Route::get('/change-admin-password', function () {
     return view('admin/admin-password');
 });
+=======
+//Exam
+Route::resource('quizes', 'App\Http\Controllers\Exam\QuizController');
+Route::get('/quiz_status/{id}', 'App\Http\Controllers\Exam\QuizController@status');
+Route::get('/quize/addquestion/{id}', 'App\Http\Controllers\Exam\QuizController@AddQuestion');
+>>>>>>> Stashed changes
 
 
 

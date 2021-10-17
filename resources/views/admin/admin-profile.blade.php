@@ -3,10 +3,10 @@
 @section('title', 'ManGo - Profil')
     <div class="page-content p-5" id="content">
       <button id="sidebarCollapse" type="button" class=" navbar-toggler btn btn-dark bg-dark rounded-pill shadow-sm px-4 py-3 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Toggle</small></button>
-      <h2 class="mb-0 subheader">Ubah Data Profil</h2> 
+      <h2 class="mb-0 subheader">Ubah Data Profil</h2>
       <div class="separator"></div>
         <div class="box-container border-0 shadow">
-            <form action="{{ route('user.update') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.update') }}" method="POST" enctype="multipart/form-data">
               @method("put")
               @csrf
               <label class="form-label" for="name">Username</label>
@@ -46,4 +46,7 @@
           </div>
 
     </div>
+
+    {{-- REQUIRE SCRIPT --}}
+    @include('sweetalert::alert')
 @endsection

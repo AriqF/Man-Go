@@ -2,7 +2,7 @@
   <div class="vertical-nav" id="sidebar">
     <div class="py-4 px-3 mb-4">
       <div class="media d-flex align-items-center">
-        <img loading="lazy" src="{{asset('img/man.png')}}" alt="..." width="80" height="80" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+        <img loading="lazy" src="{{Auth::user()->getImage()}}" alt="..." width="80" height="80" class="mr-3 rounded-circle img-thumbnail shadow-sm" id="profile-pict">
         <div class="media-body">
           <h4 class="m-0">{{Auth::user()->name}}</h4>
           <p class="font-weight-normal text-muted mb-0">{{Auth::user()->first_name}} {{Auth::user()->last_name}}</p>

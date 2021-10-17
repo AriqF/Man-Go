@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+<script language="javascript" type="text/javascript">
+    function removeSpaces(string) {
+     return string.split(' ').join('');
+    }
+    </script>
 <div class="auth-container container">
     <div class="row justify-content-center">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -49,7 +54,7 @@
                             @enderror
                         </div>
                         <div class="form-floating mb-3">
-                            <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="name" placeholder="username" value="{{ old('username') }}" required autocomplete="name" autofocus>
+                            <input onblur="this.value=removeSpaces(this.value);" id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="name" placeholder="username" value="{{ old('username') }}" required autocomplete="name" autofocus>
                             @error('username')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

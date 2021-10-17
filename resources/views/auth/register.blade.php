@@ -73,8 +73,6 @@
                             @enderror
                         </div>
 
-                        <input type="hidden" class="form-control" name="is_admin" value="0">
-
                         <div class="d-grid">
                             <button class="btn-auth" href="{{ __('Register') }}" type="submit">Daftar</button>
                         </div>

@@ -8,7 +8,7 @@ use Alert;
 class UpdateProfileInformationController extends Controller
 {
 
-    public function updateuser(Request $request)
+    public function update(Request $request)
     {
         // return $request->file('image')->store('profile-pict');
 
@@ -28,23 +28,23 @@ class UpdateProfileInformationController extends Controller
 
     }
 
-    public function updateadmin(Request $request)
-    {
-        // return $request->file('image')->store('profile-pict');
+    // public function updateadmin(Request $request)
+    // {
+    //     // return $request->file('image')->store('profile-pict');
 
-        $attr = $request->validate([
-            'name' => ['required', 'alpha_num', 'unique:users,name,' . auth()->id()],
-            'image' => 'image|file|max:1024',
-        ]);
+    //     $attr = $request->validate([
+    //         'name' => ['required', 'alpha_num', 'unique:users,name,' . auth()->id()],
+    //         'image' => 'image|file|max:1024',
+    //     ]);
 
-        if($request->file('image')){
-            $attr['image'] = $request->file('image')->store('profile-pict');
-        }
+    //     if($request->file('image')){
+    //         $attr['image'] = $request->file('image')->store('profile-pict');
+    //     }
 
-        auth()->user()->update($attr);
+    //     auth()->user()->update($attr);
 
-        //sweet alert
-        return back()-> with('success', 'Your Profile Has Been Updated');
+    //     //sweet alert
+    //     return back()-> with('success', 'Your Profile Has Been Updated');
 
-    }
+    // }
 }

@@ -76,6 +76,15 @@ h2, p {
 .subheader{
     color: #fff;
 }
+#table-user{
+    border-radius: 6px;  
+}
+.user-detail{
+    color: #fff;
+}
+.user-detail:hover{
+    color: #fff;
+}
 
 /* text */
 .text-uppercase {

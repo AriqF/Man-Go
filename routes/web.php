@@ -47,6 +47,13 @@ Route::get('/admin-profile', function () {
 Route::get('/change-admin-password', function () {
     return view('admin/admin-password');
 });
+Route::get('/user-data', function () {
+    return view('admin/user-data');
+});
+Route::get('/rating-data', function () {
+    return view('admin/rating-data');
+});
+
 
 
 

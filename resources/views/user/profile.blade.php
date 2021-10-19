@@ -54,5 +54,4 @@
         {{-- REQUIRE SCRIPT --}}
         @include('sweetalert::alert')
 @endsection
-section
 

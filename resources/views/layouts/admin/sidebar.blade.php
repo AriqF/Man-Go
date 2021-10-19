@@ -19,7 +19,7 @@
           </a>
       </li>
       <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="{{url('user-data')}}" class="nav-link">
             <i class="fas fa-users"></i> Pengguna
           </a>
       </li>
@@ -29,7 +29,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="{{url('/rating-data')}}" class="nav-link">
           <i class="fa fa-bar-chart"></i> Data Rating
         </a>
     </li>

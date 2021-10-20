@@ -33,6 +33,9 @@ Route::get('/change-password', function () {
 Route::get('/stats', function () {
     return view('user/stats');
 });
+Route::get('/feedback', function () {
+    return view('user/feedback');
+});
 Route::get('/hiragana', function () {
     return view('user/hiragana');
 });

@@ -6,7 +6,7 @@
             <ul class="navbar-nav ml-auto my-2 my-lg-0">
                 <li class="nav-item"><a class="nav-link {{ (request()->is('home')) ? 'active' : '' }}" href="{{ url('/home') }}">Belajar</a></li>
                 <li class="nav-item"><a class="nav-link {{ (request()->is('stats')) ? 'active' : '' }}" href="{{ url('/stats') }}">Statistik</a></li>
-                <li class="nav-item"><a class="nav-link {{ (request()->is('profile') || request()->is('change-password')) ? 'active' : '' }}" href="{{ url('/profile') }}">Profil</a></li>
+                <li class="nav-item"><a class="nav-link {{ (request()->is('profile') || request()->is('change-password') || request()->is('feedback')) ? 'active' : '' }}" href="{{ url('/profile') }}">Profil</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ url('/logout') }}">Keluar</a></li>
                 {{-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

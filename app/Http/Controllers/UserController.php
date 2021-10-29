@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use GrahamCampbell\ResultType\Success;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class UserController extends Controller
 {
@@ -32,10 +34,13 @@ class UserController extends Controller
 
         // ini gapake
         // return back()->with('toast_success','User Has been added successfully');
+        Alert::success('Berhasil!', 'User berhasil ditambahkan');
+        return back();
+
 
         // ini pake session
-        session()->flash('success', 'User Has been added successfully');
-        return redirect()->route('admin.user-data');
+        // session()->flash('success', 'User telah dihapus');
+        // return redirect()->route('admin.user-data');
     }
 
     public function edit($id)
@@ -56,11 +61,13 @@ class UserController extends Controller
         ]);
 
         // ini gapake
-        //return back()->with('toast_success', 'Your Profile Has Been Updated');
+        // return back()->with('toast_success', 'Your Profile Has Been Updated');
+        Alert::success('Berhasil!', 'Data user berhasil diubah');
+        return back();
 
         // ini pake session
-        session()->flash('success', 'Profile Has Been Updated');
-        return redirect()->route('admin.user-data');
+        // session()->flash('success', 'Profil berhasil diubah');
+        // return redirect()->route('admin.user-data');
     }
 
     public function destroy($id)
@@ -69,10 +76,14 @@ class UserController extends Controller
         $user->delete();
 
         // ini gapake
-        //return back()->with('toast_success', 'Your Profile Has Been Updated');
+        // return back()->with('toast_success', 'Your Profile Has Been Updated');
+        Alert::success('Berhasil!', 'User berhasil dihapus');
+        return back();
+
+        // return back()->with(toast('User telah dihapus'), null);
 
         // ini pake session
-        session()->flash('danger', 'User Has Been Deleted');
-        return redirect()->route('admin.user-data');
+        // session()->flash('danger', 'User telah dihapus');
+        // return redirect()->route('admin.user-data');
     }
 }

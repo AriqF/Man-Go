@@ -26,7 +26,8 @@
                 <th scope="col">Username</th>
                 <th scope="col">Email</th>
                 <th scope="col">Role</th>
-                <th scope="col" colspan="2">Aksi</th>
+                <th scope="col">Ubah</th>
+                <th scope="col">Hapus</th>
               </tr>
             </thead>
             <tbody>
@@ -38,11 +39,11 @@
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->is_admin }}</td>
-                    <td><a href="{{ route('admin.edit', $user->id) }}" class="user-detail btn btn-primary mb-2">Edit</a></td>
+                    <td><a href="{{ route('admin.edit', $user->id) }}" class="user-detail btn btn-primary mb-2">Ubah</a></td>
                     <form method="POST" action="{{ route('admin.destroy', $user) }}">
                         @csrf
                         @method('delete')
-                        <td><input type="submit" value="Delete" class="user-detail btn btn-danger mb-2"></td>
+                        <td><input type="submit" value="Hapus" class="user-detail btn btn-danger mb-2"/></td>
                     </form>
                 </tr>
             @endforeach

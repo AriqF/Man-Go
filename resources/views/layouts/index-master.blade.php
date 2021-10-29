@@ -9,4 +9,6 @@
 <!--icon-->
 <script src="https://kit.fontawesome.com/babb4f3fd7.js" crossorigin="anonymous"></script>
 
+{{-- Sweet Alert --}}
+@include('sweetalert::alert')
 

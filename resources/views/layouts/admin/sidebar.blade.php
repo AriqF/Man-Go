@@ -14,7 +14,7 @@
 
     <ul class="nav flex-column mb-0">
       <li class="nav-item">
-          <a href="{{url('/adminHome')}}" class="nav-link">
+          <a href="{{url('/admin-home')}}" class="nav-link">
             <i class="fa fa-th-large"></i> Dashboard
           </a>
       </li>

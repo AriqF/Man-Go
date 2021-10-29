@@ -14,22 +14,22 @@
 
     <ul class="nav flex-column mb-0">
       <li class="nav-item">
-          <a href="{{url('/admin-home')}}" class="nav-link">
+          <a href="{{url('/admin-home')}}" class="nav-link {{ (request()->is('admin-home')) ? 'sidebar-active' : '' }}">
             <i class="fa fa-th-large"></i> Dashboard
           </a>
       </li>
       <li class="nav-item">
-          <a href="{{url('user-data')}}" class="nav-link">
+          <a href="{{url('/user-data')}}" class="nav-link {{ (request()->is('user-data')) ? 'sidebar-active' : '' }}">
             <i class="fas fa-users"></i> Pengguna
           </a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="#" class="nav-link {{ (request()->is('quiz-data')) ? 'sidebar-active' : '' }}">
           <i class="fas fa-file-signature"></i> Data Soal
         </a>
     </li>
     <li class="nav-item">
-        <a href="{{url('/rating-data')}}" class="nav-link">
+        <a href="{{url('/rating-data')}}" class="nav-link {{ (request()->is('rating-data')) ? 'sidebar-active' : '' }}">
           <i class="fa fa-bar-chart"></i> Data Rating
         </a>
     </li>
@@ -39,7 +39,7 @@
 
     <ul class="nav flex-column mb-0">
       <li class="nav-item">
-        <a class="nav-link dropdown-toggle" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <a class="nav-link dropdown-toggle {{ (request()->is('admin-profile') || request()->is('change-admin-password')) ? 'sidebar-active' : '' }}" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
           <i class="fas fa-user-cog "></i> Profil
         </a>
         <div class="collapse" id="collapseExample">

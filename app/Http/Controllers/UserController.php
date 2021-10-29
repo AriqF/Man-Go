@@ -35,7 +35,7 @@ class UserController extends Controller
         // ini gapake
         // return back()->with('toast_success','User Has been added successfully');
         Alert::success('Berhasil!', 'User berhasil ditambahkan');
-        return back();
+        return redirect()->route('admin.user-data');
 
 
         // ini pake session
@@ -63,7 +63,7 @@ class UserController extends Controller
         // ini gapake
         // return back()->with('toast_success', 'Your Profile Has Been Updated');
         Alert::success('Berhasil!', 'Data user berhasil diubah');
-        return back();
+        return redirect()->route('admin.user-data');
 
         // ini pake session
         // session()->flash('success', 'Profil berhasil diubah');
@@ -78,7 +78,7 @@ class UserController extends Controller
         // ini gapake
         // return back()->with('toast_success', 'Your Profile Has Been Updated');
         Alert::success('Berhasil!', 'User berhasil dihapus');
-        return back();
+        return redirect()->route('admin.user-data');
 
         // return back()->with(toast('User telah dihapus'), null);
 

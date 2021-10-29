@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Alert;
-
+use GrahamCampbell\ResultType\Success;
+use RealRashid\SweetAlert\Facades\Alert;
 class UpdateProfileInformationController extends Controller
 {
 
@@ -24,7 +24,8 @@ class UpdateProfileInformationController extends Controller
         auth()->user()->update($attr);
 
         //sweet alert
-        return back()-> with('success', 'Your Profile Has Been Updated');
+        Alert::success('Berhasil!', 'Data user berhasil diubah');
+        return back();
 
     }
 

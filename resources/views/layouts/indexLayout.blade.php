@@ -22,8 +22,17 @@
         <ul class="navbar-nav ml-auto">
             @if (Route::has('login'))
             @auth
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/dashboard') }}" type="submit">#username</a>
+                {{-- <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/home') }}" type="submit">{{Auth::user()->name}}</a>
+                </li> --}}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                        {{Auth::user()->name}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
+                    <a class="dropdown-item" href="{{url('/logout')}}">Keluar</a>
+                    </div>
                 </li>
             @else
                     <li class="nav-item">

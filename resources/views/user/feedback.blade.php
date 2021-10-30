@@ -9,7 +9,7 @@
                             {{-- @method("put") --}}
                             @csrf
                             <label class="form-label mt-3" for="user_rate" style="font-size: 16px">Bagaimana Pengalaman Anda Menggunakan Aplikasi ManGo?</label>
-                            <div class="mb-4 mt-1" id="user_rate">
+                            {{-- <div class="mb-4 mt-1" id="user_rate">
                                 <div class="form-check form-check-inline">
                                     <div class="custom-control custom-radio">
                                         <input type="radio" id="customRadio1" name="rating" class="custom-control-input" value="1">
@@ -40,10 +40,24 @@
                                         <label class="custom-control-label" for="customRadio5">Sangat Baik</label>
                                     </div>
                                 </div>
+                            </div> --}}
+
+                            <input id="input-id" type="text" class="rating custom-control-input" data-size="sm">
+
+                            <label class="form-label" for="feed_category" style="font-size: 16px; margin-top: 8px;">Pilih kategori feedback</label>
+                            <div class="input-group mb-3" id="feed_category">
+                                <div class="input-group-prepend">
+                                  <label class="input-group-text" for="feedback_opt">Opsi</label>
+                                </div>
+                                <select class="custom-select" id="feedback_opt">
+                                  <option selected>Pilih..</option>
+                                  <option value="1">Saran dan Kritik</option>
+                                  <option value="2">Keluhan</option>
+                                  <option value="3">Lainnya</option>
+                                </select>
                             </div>
-                            
-            
-                            <label class="form-label" for="user_feedback" style="font-size: 16px">Komentar</label>
+
+                            <label class="form-label" for="user_feedback" style="font-size: 16px; margin-top: 8px;">Komentar</label>
                             <textarea id="user_feedback" type="text" class="form-control" name="user_feedback" rows="4"></textarea>
 
                             <div class="d-grid">

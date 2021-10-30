@@ -24,7 +24,8 @@ class QuizController extends Controller
      */
     public function create()
     {
-        return view('admin.create-quiz');
+        $quizes=Quizes::orderBy('id','desc')->paginate(50);
+        return view('admin.create-quiz',compact('quizes'));
     }
 
     /**

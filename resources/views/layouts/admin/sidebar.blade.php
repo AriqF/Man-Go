@@ -24,10 +24,20 @@
           </a>
       </li>
       <li class="nav-item">
-        <a href="{{url('quizes/create')}}" class="nav-link {{ (request()->is('quiz-data')) ? 'sidebar-active' : '' }}">
-          <i class="fas fa-file-signature"></i> Data Soal
+        <a class="nav-link dropdown-toggle {{ (request()->is('admin-profile') || request()->is('change-admin-password')) ? 'sidebar-active' : '' }}" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <i class="fas fa-user-cog "></i> Quiz
         </a>
-    </li>
+        <div class="collapse" id="collapseExample">
+          <ul class="nav flex-column ">
+            <li class="nav-item dropdown-collapse">
+              <a class="nav-link" aria-current="page" href="{{url('quizes/create')}}">Create Quiz</a>
+            </li>
+            <li class="nav-item dropdown-collapse">
+              <a class="nav-link " href="#">Quiz Data</a>
+            </li>
+          </ul>
+        </div>
+      </li>
     <li class="nav-item">
         <a href="{{url('/rating-data')}}" class="nav-link {{ (request()->is('rating-data')) ? 'sidebar-active' : '' }}">
           <i class="fa fa-bar-chart"></i> Data Rating

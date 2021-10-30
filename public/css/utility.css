@@ -1,6 +1,6 @@
 /* button utility */
 .btnr{
-    padding: 9px 26px;
+    padding: 8px 26px;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     border: none;
@@ -39,6 +39,7 @@
 .btn-send:hover{
     background-color: #07658D;
 }
+
 
 /* card utility */
 .card-aqua{

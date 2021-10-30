@@ -57,7 +57,7 @@ Route::get('/test', function () {
 Route::get('/rating-data', function () {
     return view('admin/rating-data');
 });
-
+Route::resource('quizes', 'App\Http\Controllers\QuizController');
 
 
 

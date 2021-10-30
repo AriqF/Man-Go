@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Quizes;
 
 class QuizController extends Controller
 {
@@ -34,7 +35,12 @@ class QuizController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'quiz_name'=>'required|unique:quizes',  
+        ]);
+        $data=$request->all();
+        Quizes::create($data);
+        return redirect()->back()->with('success','Data add successfully');
     }
 
     /**

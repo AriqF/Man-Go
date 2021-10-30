@@ -1,6 +1,6 @@
 @extends('layouts.admin.adminLayout')
 @section('main-content')
-@section('title', 'ManGo - Profil')
+@section('title', 'ManGo - Create Quiz')
     <div class="page-content p-5" id="content">
     <button id="sidebarCollapse" type="button" class=" navbar-toggler btn btn-dark bg-dark rounded-pill shadow-sm px-4 py-3 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Toggle</small></button>
     <h2 class="mb-0 subheader">Create Quiz</h2>

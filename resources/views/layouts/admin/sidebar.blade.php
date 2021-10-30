@@ -24,7 +24,7 @@
           </a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link {{ (request()->is('quiz-data')) ? 'sidebar-active' : '' }}">
+        <a href="{{url('quizes/create')}}" class="nav-link {{ (request()->is('quiz-data')) ? 'sidebar-active' : '' }}">
           <i class="fas fa-file-signature"></i> Data Soal
         </a>
     </li>

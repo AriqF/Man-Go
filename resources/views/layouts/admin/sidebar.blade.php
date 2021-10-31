@@ -24,10 +24,10 @@
           </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link dropdown-toggle {{ (request()->is('admin-profile') || request()->is('change-admin-password')) ? 'sidebar-active' : '' }}" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-          <i class="fas fa-user-cog "></i> Quiz
+        <a class="nav-link dropdown-toggle {{ (request()->is('quizes/create') || request()->is('quizes/data')) ? 'sidebar-active' : '' }}" data-toggle="collapse" href="#quizCollapse" role="button" aria-expanded="false" aria-controls="quizCollapse">
+          <i class="fas fa-book"></i> Quiz
         </a>
-        <div class="collapse" id="collapseExample">
+        <div class="collapse" id="quizCollapse">
           <ul class="nav flex-column ">
             <li class="nav-item dropdown-collapse">
               <a class="nav-link" aria-current="page" href="{{url('quizes/create')}}">Create Quiz</a>
@@ -49,10 +49,10 @@
 
     <ul class="nav flex-column mb-0">
       <li class="nav-item">
-        <a class="nav-link dropdown-toggle {{ (request()->is('admin-profile') || request()->is('change-admin-password')) ? 'sidebar-active' : '' }}" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <a class="nav-link dropdown-toggle {{ (request()->is('admin-profile') || request()->is('change-admin-password')) ? 'sidebar-active' : '' }}" data-toggle="collapse" href="#profileCollapse" role="button" aria-expanded="false" aria-controls="profileCollapse">
           <i class="fas fa-user-cog "></i> Profil
         </a>
-        <div class="collapse" id="collapseExample">
+        <div class="collapse" id="profileCollapse">
           <ul class="nav flex-column ">
             <li class="nav-item dropdown-collapse">
               <a class="nav-link" aria-current="page" href="{{url('/admin-profile')}}">Data Profil</a>

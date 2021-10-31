@@ -52,7 +52,10 @@ class QuizController extends Controller
      */
     public function show($id)
     {
-        //
+        $data=Quizes::find($id);
+        $questions=Questions::where('quizes_id',$id)->get();
+        return view('Exam.quiz.details',compact('data','questions'));
+
     }
 
     /**
@@ -84,6 +87,25 @@ class QuizController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function status($id)
+    {
+        $data=Quizes::find($id);
+        if($data->status=="1"){
+            $data->status=0;
+        }else{
+        $data->status=1;
+        }
+        $data->save();
+
+    }
+    public function AddQuestion($id)
+    {
+        $quizId=Quizes::find($id);
+        return view('question.add_question',compact('quizId'));
+
+    }
+
     public function destroy($id)
     {
         //

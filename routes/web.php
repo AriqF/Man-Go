@@ -58,6 +58,12 @@ Route::get('/rating-data', function () {
     return view('admin/rating-data');
 });
 Route::resource('quizes', 'App\Http\Controllers\QuizController');
+Route::get('/quiz_status/{id}', 'App\Http\Controllers\QuizController@status');
+Route::get('/quize/addquestion/{id}', 'App\Http\Controllers\QuizController@AddQuestion');
+
+Route::resource('questions', 'App\Http\Controllers\QuestionController');
+Route::get('question/edit/{id}',[App\Http\Controllers\QuizController::class, 'edit'])->name('question.update')->middleware('is_admin');
+Route::put('question/{id}',[App\Http\Controllers\UserController::class, 'update'])->name('admin.update')->middleware('is_admin');
 
 
 

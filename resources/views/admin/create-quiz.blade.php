@@ -54,37 +54,37 @@
 
             <div class="col-md-12 ">
                 {{$quizes->links()}}
-                <table class="table table-bordered text-white" id="datatables">
-                   <thead>
-                       <tr>
-                           <th>Sl</th>
-                           <th>Quiz Name</th>
-                           <th>Description</th>
-                           <th>Time</th>
-                           <th>Num of Exam Qus</th>
-                           <th>Status</th>
-                           <th>Add Question</th>
-                           <th>Details</th>
-                           <th>Edit</th>
-                           <th>Delete</th>
-                       </tr>
-                   </thead>
-                   <tbody>
-                       @foreach($quizes as $key=>$data)
-                       <tr>
-                           <td>{{++$key}} </td>
-                           <td>{{$data->quiz_name}} </td>
-                           <td>{{$data->description}} </td>
-                           <td>{{$data->quiz_time}} </td>
-                           <td>{{$data->number_of_question}} </td>
-                           <td><input type="checkbox" name="status" class="quiz-status" data_id="{{$data->id}}" {{$data->status=='1'?'checked':''}}> </td>
-                           <td><a href="/quize/addquestion/{{$data->id}}">Add Question</a></td>
-                           <td><a href="/quizes/{{$data->id}}">Details</a></td>
-                           <td><a href="/quizes/{{$data->id}}/edit">Edit</a></td>
-                          
-                       </tr>
-                       @endforeach
-                   </tbody>
+                <table class="table table-striped table-dark text-center" id="datatables">
+                    <thead>
+                        <tr>
+                            <th>Sl</th>
+                            <th>Quiz Name</th>
+                            <th>Description</th>
+                            <th>Time</th>
+                            <th>Num of Exam Qus</th>
+                            <th>Status</th>
+                            <th>Add Question</th>
+                            <th>Details</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($quizes as $key=>$data)
+                        <tr>
+                            <td>{{++$key}} </td>
+                            <td>{{$data->quiz_name}} </td>
+                            <td>{{$data->description}} </td>
+                            <td>{{$data->quiz_time}} </td>
+                            <td>{{$data->number_of_question}} </td>
+                            <td><input type="checkbox" name="status" class="quiz-status" data_id="{{$data->id}}" {{$data->status=='1'?'checked':''}}> </td>
+                            <td><a href="/quize/addquestion/{{$data->id}}">Add Question</a></td>
+                            <td><a href="/quizes/{{$data->id}}">Details</a></td>
+                            <td><a href="/quizes/{{$data->id}}/edit">Edit</a></td>
+                            
+                        </tr>
+                        @endforeach
+                    </tbody>
                 </table>
             </div>
         </div>

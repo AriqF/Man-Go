@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Quizes;
+use App\Models\Questions;
 
 class QuizController extends Controller
 {
@@ -54,7 +55,7 @@ class QuizController extends Controller
     {
         $data=Quizes::find($id);
         $questions=Questions::where('quizes_id',$id)->get();
-        return view('Exam.quiz.details',compact('data','questions'));
+        return view('question.details',compact('data','questions'));
 
     }
 

@@ -62,12 +62,9 @@ Route::get('/quiz_status/{id}', 'App\Http\Controllers\QuizController@status');
 Route::get('/quize/addquestion/{id}', 'App\Http\Controllers\QuizController@AddQuestion');
 
 Route::resource('questions', 'App\Http\Controllers\QuestionController');
-Route::get('question/edit/{id}',[App\Http\Controllers\QuizController::class, 'edit'])->name('question.update')->middleware('is_admin');
-Route::put('question/{id}',[App\Http\Controllers\UserController::class, 'update'])->name('admin.update')->middleware('is_admin');
 
-
-
-
+Route::get('/quiz','App\Http\Controllers\Frontend\ExamController@quizList');
+Route::get('/exam-start/{id}','App\Http\Controllers\Frontend\ExamController@exam');
 
 // ------------------------------------  USER ------------------------------------ //
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');

@@ -25,7 +25,7 @@
                     <label class="col-sm-3 control-label no-padding-right" for="form-field-2">Quiz Time</label>
                     <div class="col-sm-9">
                         <input type="text" id="form-field-2" placeholder="00:00"  pattern="[0-9]{2}:[0-9]{2}" class="col-xs-10 col-sm-5 form-control"
-                         name="quiz_time" required="" title="example 01:00 " aria-describedby="quizTime_help" />
+                        name="quiz_time" required="" title="example 01:00 " aria-describedby="quizTime_help" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -78,10 +78,10 @@
                             <td>{{$data->quiz_time}} </td>
                             <td>{{$data->number_of_question}} </td>
                             <td><input type="checkbox" name="status" class="quiz-status" data_id="{{$data->id}}" {{$data->status=='1'?'checked':''}}> </td>
-                            <td><a href="/quize/addquestion/{{$data->id}}">Add Question</a></td>
-                            <td><a href="/quizes/{{$data->id}}">Details</a></td>
+                            <td><a href="/quize/addquestion/{{$data->id}}" class="btn btn-success mb-2">Add Question</></td>
+                            <td><a href="/quizes/{{$data->id}}" class="btn btn-info mb-2">Details</a></td>
                             <td><a href="/quizes/{{$data->id}}/edit">Edit</a></td>
-                            
+                            <td><a href="#" class="btn btn-danger mb-2">Delete</a></td>
                         </tr>
                         @endforeach
                     </tbody>

@@ -87,6 +87,23 @@ table img{
 table img:hover{
     transform: scale(1.14);
 }
+/* quiz page */
+.box-num{
+    padding: 12px 14px;
+    margin: 8px;
+    background-color: #ffffff;
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0.5px solid #E2E2E3;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.box-num:hover{
+    text-decoration: none;
+    color: #da5e0b;
+    background-color: #ffdfc2;
+}
 /* responsive settings */
 @media (min-width: 200px) and (max-width: 767px){
     .page-section{

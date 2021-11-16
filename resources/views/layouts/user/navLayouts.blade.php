@@ -5,6 +5,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto my-2 my-lg-0">
                 <li class="nav-item"><a class="nav-link {{ (request()->is('home')) ? 'active' : '' }}" href="{{ url('/home') }}">Belajar</a></li>
+                <li class="nav-item"><a class="nav-link {{ (request()->is('quiz') ) ? 'active' : '' }}" href="{{ url('/quiz') }}">Quiz</a></li>
                 <li class="nav-item"><a class="nav-link {{ (request()->is('stats')) ? 'active' : '' }}" href="{{ url('/stats') }}">Statistik</a></li>
                 <li class="nav-item"><a class="nav-link {{ (request()->is('profile') || request()->is('change-password') || request()->is('feedback')) ? 'active' : '' }}" href="{{ url('/profile') }}">Profil</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ url('/logout') }}">Keluar</a></li>

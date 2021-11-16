@@ -66,14 +66,11 @@
                                 <p>Belajar dasar-dasar huruf Hiragana dan kosa kata dasar</p>
                             </div>
                             <div class="col-xl-4 col-md-6 col-sm-12">
-                                <div class="d-flex flex-column bd-highlight mb-3 text-center">
-                                    <div class=" bd-highlight">
-                                        <a href="{{ url('/quiz') }}"><button class="btnr btn-excercise"　href="#">Kerjakan Soal</button></a>
+                                <div class="d-flex flex-column bd-highlight mb-3 text-center my-2">
+                                    <div class="bd-highlight">
+                                        <a href="{{ url('/hiragana') }}"><button class="btnr btn-learn ">Belajar Materi</button></a>
                                     </div>
-                                    <div class=" bd-highlight">
-                                        <a href="{{ url('/hiragana') }}"><button class="btnr btn-learn">Belajar Materi</button></a>
-                                    </div>
-                                  </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -85,12 +82,9 @@
                                 <p>Belajar dasar-dasar huruf Katakana dan kosa kata dasar</p>
                             </div>
                             <div class="col-xl-4 col-md-6 col-sm-12">
-                                <div class="d-flex flex-column bd-highlight mb-3 text-center">
+                                <div class="d-flex flex-column bd-highlight mb-3 text-center my-2">
                                     <div class=" bd-highlight">
-                                        <a href="#"> <button class="btnr btn-excercise disabled" disabled>Kerjakan Soal</button> </a>
-                                    </div>
-                                    <div class=" bd-highlight">
-                                        <a href="{{url('/katakana')}}"> <button class="btnr btn-learn">Belajar Materi</button> </a>
+                                        <a href="{{url('/katakana')}}"> <button class="btnr btn-learn ">Belajar Materi</button> </a>
                                     </div>
                                   </div>
                             </div>
@@ -104,12 +98,9 @@
                                 <p>Belajar angka dari 0 sampai dengan ribuan</p>
                             </div>
                             <div class="col-xl-4 col-md-6 col-sm-12">
-                                <div class="d-flex flex-column bd-highlight mb-3 text-center">
+                                <div class="d-flex flex-column bd-highlight mb-3 text-center my-2">
                                     <div class=" bd-highlight">
-                                        <a href="#">  <button class="btnr btn-excercise disabled" disabled>Kerjakan Soal</button> </a>
-                                    </div>
-                                    <div class=" bd-highlight">
-                                        <a href="#"> <button class="btnr btn-learn">Belajar Materi</button> </a>
+                                        <a href="#"> <button class="btnr btn-learn ">Belajar Materi</button> </a>
                                     </div>
                                   </div>
                             </div>
@@ -123,20 +114,14 @@
                                 <p>Pengenalan dasar kanji dan beserta cara membacanya</p>
                             </div>
                             <div class="col-xl-4 col-md-6 col-sm-12">
-                                <div class="d-flex flex-column bd-highlight mb-3 text-center">
+                                <div class="d-flex flex-column bd-highlight mb-3 text-center my-2">
                                     <div class=" bd-highlight">
-                                        <a href="#">  <button class="btnr btn-excercise disabled" disabled>Kerjakan Soal</button> </a>
-                                    </div>
-                                    <div class=" bd-highlight">
-                                        <a href="#"> <button class="btnr btn-learn">Belajar Materi</button> </a>
+                                        <a href="#"> <button class="btnr btn-learn ">Belajar Materi</button> </a>
                                     </div>
                                   </div>
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </div>

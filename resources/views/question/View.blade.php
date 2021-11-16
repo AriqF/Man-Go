@@ -26,8 +26,7 @@
                         <td>{{$qus->answer}}</td>
                         <td>View</td>
                         <td><a href="/questions/{{$qus->id}}/edit">Edit</a></td>
-                        <td>
-                        </td>
+                        <td><a href={{"/questions/delete/".$qus['id']}}><i class="fas fa-minus-square cfont-delete"></i></a></td>
                     </tr>
                 @endforeach
             </tbody>  

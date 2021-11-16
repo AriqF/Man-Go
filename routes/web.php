@@ -66,6 +66,9 @@ Route::get('quizes/delete/{id}', 'App\Http\Controllers\QuizController@delete');
 
 Route::resource('questions', 'App\Http\Controllers\QuestionController');
 
+//Delete data-quiz
+Route::get('questions/delete/{id}', 'App\Http\Controllers\QuestionController@delete');
+
 Route::get('/quiz','App\Http\Controllers\Frontend\ExamController@quizList');
 Route::get('/exam-start/{id}','App\Http\Controllers\Frontend\ExamController@exam');
 

@@ -3,8 +3,8 @@
     <head>
         @section('title', 'ManGo - Belajar Bahasa Jepang')
         @extends('layouts.index-master')
-        <link rel="stylesheet" href="{{ asset('css/userStyle.css') }}" type="text/css"> 
-        <link rel="stylesheet" href="{{ asset('css/utility.css') }}" type="text/css"> 
+        <link rel="stylesheet" href="{{ asset('css/userStyle.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('css/utility.css') }}" type="text/css">
         <style>
             .disabled{
                 background-color: #d8d7d5;
@@ -13,7 +13,7 @@
                 background-color: #d8d7d5;
             }
         </style>
-        
+
     </head>
     <body style="background-color: #f3f7f7">
         @extends('layouts.user.navLayouts')
@@ -68,7 +68,7 @@
                             <div class="col-xl-4 col-md-6 col-sm-12">
                                 <div class="d-flex flex-column bd-highlight mb-3 text-center">
                                     <div class=" bd-highlight">
-                                        <a href="#"><button class="btnr btn-excercise"　href="#">Kerjakan Soal</button></a>
+                                        <a href="{{ url('/quiz') }}"><button class="btnr btn-excercise"　href="#">Kerjakan Soal</button></a>
                                     </div>
                                     <div class=" bd-highlight">
                                         <a href="{{ url('/hiragana') }}"><button class="btnr btn-learn">Belajar Materi</button></a>

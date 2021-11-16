@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Quizes;
 use App\Models\Questions;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class QuizController extends Controller
 {
@@ -107,8 +108,11 @@ class QuizController extends Controller
 
     }
 
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $data=Quizes::find($id);
+        $data->delete();
+        Alert::success('Berhasil!', 'Quiz berhasil dihapus');
+        return redirect('/quizes/create');
     }
 }

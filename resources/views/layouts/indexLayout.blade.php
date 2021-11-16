@@ -17,7 +17,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Aksi III</a>
-            </li>      
+            </li>
         </ul>
         <ul class="navbar-nav ml-auto">
             @if (Route::has('login'))
@@ -30,7 +30,7 @@
                         {{Auth::user()->name}}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
+                    <a class="dropdown-item" href="{{ url('/admin-home') }}">Dashboard</a> {{-- Masuk ke home --}}
                     <a class="dropdown-item" href="{{url('/logout')}}">Keluar</a>
                     </div>
                 </li>
@@ -50,7 +50,7 @@
     </div>
 </nav>
 @yield('mainContent')
-@extends('layouts.footer') 
+@extends('layouts.footer')
     {{-- anime js --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>

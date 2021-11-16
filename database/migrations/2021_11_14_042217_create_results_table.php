@@ -25,6 +25,10 @@ class CreateResultsTable extends Migration
             $table->timestamps();
 
         });
+
+        Schema::table('results', function (Blueprint $table) {
+            $table->foreign('quizes_id')->references('id')->on('quizes')->onDelete('cascade')->onUpdate('cascade');
+        });
     }
 
     /**

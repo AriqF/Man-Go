@@ -66,6 +66,13 @@ Route::resource('questions', 'App\Http\Controllers\QuestionController');
 Route::get('/quiz','App\Http\Controllers\Frontend\ExamController@quizList');
 Route::get('/exam-start/{id}','App\Http\Controllers\Frontend\ExamController@exam');
 
+Route::post('/exams','App\Http\Controllers\Frontend\ExamController@examPost');
+Route::get('/MyExamResult','App\Http\Controllers\Frontend\ExamController@examResult');
+Route::get('/profile','App\Http\Controllers\Frontend\ExamController@examResult');
+
+Route::get('/MyExamDetails/{id}', 'App\Http\Controllers\Frontend\ExamController@ResultDetails');
+
+
 // ------------------------------------  USER ------------------------------------ //
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes(['verify' => true]); //untuk verifikasi email

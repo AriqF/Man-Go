@@ -33,7 +33,7 @@
               <a class="nav-link" aria-current="page" href="{{url('quizes/create')}}">Create Quiz</a>
             </li>
             <li class="nav-item dropdown-collapse">
-              <a class="nav-link " href="#">Quiz Data</a>
+              <a class="nav-link " href="{{url('questions')}}">Quiz Data</a>
             </li>
           </ul>
         </div>

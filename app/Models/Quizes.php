@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Quizes extends Model
 {
-    protected $fillable=['quiz_name','description','quiz_time','status','number_of_question'];
+    protected $table = "Quizes";
+    protected $primarykey = "id";
+    protected $fillable=['id','quiz_name','description','quiz_time','status','number_of_question'];
+
+    public function Results(){
+        return $this->hasMany(Results::class);
+    }
+
 }

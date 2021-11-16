@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Results extends Model
 {
-    use HasFactory;
+    protected $table = "Results";
+    protected $primarykey = "id";
+    protected $fillable=['id','user_id','quizes_id','total_mark','yes_ans','no_ans','status', 'date'];
+
+    public function Quizes(){
+        return $this->belongsTo(Quizes::class);
+    }
+
 }

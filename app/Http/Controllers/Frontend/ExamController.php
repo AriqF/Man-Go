@@ -6,9 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Quizes;
 use App\Models\Questions;
-use App\Models\Exam;
+use App\Models\Exams;
 use App\Models\Results;
-use Sentinel;
+use Auth;
 
 class ExamController extends Controller
 {
@@ -32,7 +32,7 @@ class ExamController extends Controller
 
     public function examPost(Request $request)
     {
-        $userId=Sentinel::getUser()->id;
+        $userId=Auth::getUser()->id;
         $date=date('Y-m-d');
         $yes=0;
         $no=0;
@@ -80,17 +80,18 @@ class ExamController extends Controller
     
     public function examResult()
     {
-    $userId=Sentinel::getUser()->id;
+        $userId=Auth::getUser()->id;
         $results=Results::orderBy('id','desc')->where('user_id',$userId)->paginate(10);
-        return view('frontend.exam.result',compact('results'));
+        $quiz = Results::with('Quizes')->paginate(10);
+        return view('question.result',compact('results','quiz'));
     }
     public function ResultDetails($id)
     {
-        $userId=Sentinel::getUser()->id;
+        $userId=Auth::getUser()->id;
         $exams=Exams::where('user_id', $userId)->where('quizes_id',$id)->get();
         $quiz=Quizes::find($id);
         $questions=Questions::where('quizes_id',$id)->get();
-        return view('frontend.exam.resultDetails',compact('exams','quiz','questions'));
+        return view('question.resultdetails',compact('exams','quiz','questions'));
     }
 
 }

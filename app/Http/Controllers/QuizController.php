@@ -27,6 +27,7 @@ class QuizController extends Controller
     public function create()
     {
         $quizes=Quizes::orderBy('id','desc')->paginate(50);
+        $quiz=Quizes::all();
         return view('admin.create-quiz',compact('quizes'));
     }
 
@@ -103,8 +104,10 @@ class QuizController extends Controller
     }
     public function AddQuestion($id)
     {
+        
+        $quiz=Quizes::all();
         $quizId=Quizes::find($id);
-        return view('question.add_question',compact('quizId'));
+        return view('question.add_question',compact('quizId','quiz'));
 
     }
 

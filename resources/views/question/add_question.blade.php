@@ -15,7 +15,9 @@
                 <label class="col-sm-2 control-label no-padding-right" for="form-field-2"> Quiz Name </label>
                 <div class="col-sm-10">
                     <select class="form-control" name="quizes_id" required="">
-                        <option value=" {{$quizId->id}} ">{{$quizId->quiz_name}}</option>
+                        @foreach ($quiz as $item)
+                            <option value=" {{$item->id}} ">{{$item->quiz_name}}</option>
+                        @endforeach
                     </select>
                     
                 </div>

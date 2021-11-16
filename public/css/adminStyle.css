@@ -91,6 +91,9 @@ h2, p {
 .user-detail:hover{
     color: #fff;
 }
+.table-body-quiz td i{
+    font-size: 20px;
+}
 
 /* text */
 .text-uppercase {

@@ -69,7 +69,7 @@
                             <th>Delete</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="table-body-quiz">
                         @foreach($quizes as $key=>$data)
                         <tr>
                             <td>{{++$key}} </td>
@@ -78,10 +78,10 @@
                             <td>{{$data->quiz_time}} </td>
                             <td>{{$data->number_of_question}} </td>
                             <td><input type="checkbox" name="status" class="quiz-status" data_id="{{$data->id}}" {{$data->status=='1'?'checked':''}}> </td>
-                            <td><a href="/quize/addquestion/{{$data->id}}" class="btn btn-success mb-2">Add Question</></td>
-                            <td><a href="/quizes/{{$data->id}}" class="btn btn-info mb-2">Details</a></td>
-                            <td><a href="/quizes/{{$data->id}}/edit">Edit</a></td>
-                            <td><a href="#" class="btn btn-danger mb-2">Delete</a></td>
+                            <td><a href="/quize/addquestion/{{$data->id}}"><i class="fas fa-plus-square cfont-add" ></i></a> </td>
+                            <td><a href="/quizes/{{$data->id}}"><i class="fas fa-info-circle cfont-info" ></i></a></td>
+                            <td><a href="/quizes/{{$data->id}}/edit"><i class="fas fa-edit cfont-edit"></i> </a></td>
+                            <td><a href="#"><i class="fas fa-minus-square cfont-delete"></i></a></td>
                         </tr>
                         @endforeach
                     </tbody>

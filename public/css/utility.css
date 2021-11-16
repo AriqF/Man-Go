@@ -40,7 +40,31 @@
     background-color: #07658D;
 }
 
-
+/*font color utility */
+.cfont-add{
+    color: #50da0b;
+}
+.cfont-add:hover{
+    color: #5DF213;
+}
+.cfont-info{
+    color: #15aabf;
+}
+.cfont-info:hover{
+    color: #19BED5;
+}
+.cfont-edit{
+    color:#fd7e14;
+}
+.cfont-edit:hover{
+    color: #FF943B;
+}
+.cfont-delete{
+    color:#EA2B4A;
+}
+.cfont-delete:hover{
+    color: #FC3051;
+}
 /* card utility */
 .card-aqua{
     border-left: 0.25rem solid #32CCBC !important;

@@ -11,7 +11,7 @@
                     <th>SL</th>
                     <th>Quiz Name</th>
                     <th>Question</th>
-                    <th>Right Ans</th>
+                    <th>Right Answer</th>
                     <th>View</th>
                     <th>Edit</th>
                     <th>Delete</th>

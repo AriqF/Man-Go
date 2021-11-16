@@ -106,8 +106,7 @@ class QuizController extends Controller
     {
         
         $quiz=Quizes::all();
-        $quizId=Quizes::find($id);
-        return view('question.add_question',compact('quizId','quiz'));
+        return view('question.add_question',compact('quiz'));
 
     }
 

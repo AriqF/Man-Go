@@ -50,7 +50,7 @@ class QuestionController extends Controller
     {
         $data=Questions::find($id);
         $quiz=Quizes::all();
-        return view('question.edit',compact('data','quiz'));
+        return view('question.edit-question',compact('data','quiz'));
     }
 
     
@@ -73,7 +73,7 @@ class QuestionController extends Controller
                 $dbazar->update($datad);
             }
         }
-        return redirect()->back()->with('success','Data update successfully');  
+        return redirect('/questions')->with('success','Data update successfully');  
     }
 
     public function delete($id)

@@ -59,12 +59,21 @@ Route::get('/rating-data', function () {
 });
 Route::resource('quizes', 'App\Http\Controllers\QuizController');
 Route::get('/quiz_status/{id}', 'App\Http\Controllers\QuizController@status');
+
+//create quiz-data
 Route::get('/quize/addquestion/{id}', 'App\Http\Controllers\QuizController@AddQuestion');
 
 //Delete quiz
 Route::get('quizes/delete/{id}', 'App\Http\Controllers\QuizController@delete');
 
+//show quiz-data
 Route::resource('questions', 'App\Http\Controllers\QuestionController');
+
+//Edit quiz-data
+Route::get ('/quize/edit/{id}', 'App\Http\Controllers\QuestionController@edit')->name('edit-quiz-data');
+
+//Update quiz-data
+Route::post ('/quize/update/{id}', 'App\Http\Controllers\QuestionController@update')->name('update-quiz-data');
 
 //Delete data-quiz
 Route::get('questions/delete/{id}', 'App\Http\Controllers\QuestionController@delete');

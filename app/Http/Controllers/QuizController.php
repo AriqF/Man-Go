@@ -67,9 +67,11 @@ class QuizController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function edit($id)
     {
-        //
+        $data=Quizes::find($id);
+        return view('admin.edit-quiz',compact('data'));
     }
 
     /**
@@ -81,7 +83,11 @@ class QuizController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data=Quizes::find($id);
+        $new_data=$request->all();
+        $data->update($new_data);
+
+        return redirect('/quizes/create')->with('success','Quiz update successfully');  
     }
 
     /**

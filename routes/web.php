@@ -60,33 +60,14 @@ Route::get('/rating-data', function () {
 Route::resource('quizes', 'App\Http\Controllers\QuizController');
 Route::get('/quiz_status/{id}', 'App\Http\Controllers\QuizController@status');
 
-//create quiz-data
-Route::get('/quize/addquestion/{id}', 'App\Http\Controllers\QuizController@AddQuestion');
+// edit quiz
+Route::get('/quizes/quiz-edit/{id}', 'App\Http\Controllers\QuizController@edit');
+
+// update quiz
+Route::Post('/quizes/quiz-update/{id}', 'App\Http\Controllers\QuizController@update');
 
 //Delete quiz
 Route::get('quizes/delete/{id}', 'App\Http\Controllers\QuizController@delete');
-
-//show quiz-data
-Route::resource('questions', 'App\Http\Controllers\QuestionController');
-
-//Edit quiz-data
-Route::get ('/quize/edit/{id}', 'App\Http\Controllers\QuestionController@edit')->name('edit-quiz-data');
-
-//Update quiz-data
-Route::post ('/quize/update/{id}', 'App\Http\Controllers\QuestionController@update')->name('update-quiz-data');
-
-//Delete data-quiz
-Route::get('questions/delete/{id}', 'App\Http\Controllers\QuestionController@delete');
-
-Route::get('/quiz','App\Http\Controllers\Frontend\ExamController@quizList');
-Route::get('/exam-start/{id}','App\Http\Controllers\Frontend\ExamController@exam');
-
-Route::post('/exams','App\Http\Controllers\Frontend\ExamController@examPost');
-Route::get('/MyExamResult','App\Http\Controllers\Frontend\ExamController@examResult');
-Route::get('/profile','App\Http\Controllers\Frontend\ExamController@examResult');
-
-Route::get('/MyExamDetails/{id}', 'App\Http\Controllers\Frontend\ExamController@ResultDetails');
-
 
 // ------------------------------------  USER ------------------------------------ //
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
@@ -109,10 +90,6 @@ Route::get('change-password', [App\Http\Controllers\HomeController::class, 'chan
 Route::get('hiragana', [App\Http\Controllers\HomeController::class, 'hiragana'])->name('hiragana');
 // Hiragana user
 Route::get('katakana', [App\Http\Controllers\HomeController::class, 'katakana'])->name('katakana');
-
-
-
-
 
 // ------------------------------------  ADMIN ------------------------------------ //
 
@@ -141,3 +118,29 @@ Route::put('user-data/{id}',[App\Http\Controllers\UserController::class, 'update
 
 //Delete User
 Route::delete('user-data/{id}',[App\Http\Controllers\UserController::class, 'destroy'])->name('admin.destroy')->middleware('is_admin');
+
+// ------------------------------------  QUIZ DATA ------------------------------------ //
+
+//show quiz-data
+Route::resource('questions', 'App\Http\Controllers\QuestionController');
+
+//create quiz-data
+Route::get('/quize/addquestion/{id}', 'App\Http\Controllers\QuizController@AddQuestion');
+
+//Edit quiz-data
+Route::get ('/quize/edit/{id}', 'App\Http\Controllers\QuestionController@edit')->name('edit-quiz-data');
+
+//Update quiz-data
+Route::post ('/quize/update/{id}', 'App\Http\Controllers\QuestionController@update')->name('update-quiz-data');
+
+//Delete data-quiz
+Route::get('questions/delete/{id}', 'App\Http\Controllers\QuestionController@delete');
+
+Route::get('/quiz','App\Http\Controllers\Frontend\ExamController@quizList');
+Route::get('/exam-start/{id}','App\Http\Controllers\Frontend\ExamController@exam');
+
+Route::post('/exams','App\Http\Controllers\Frontend\ExamController@examPost');
+Route::get('/MyExamResult','App\Http\Controllers\Frontend\ExamController@examResult');
+Route::get('/profile','App\Http\Controllers\Frontend\ExamController@examResult');
+
+Route::get('/MyExamDetails/{id}', 'App\Http\Controllers\Frontend\ExamController@ResultDetails');

@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="col-xl-8 col-md-12">
-                    <h3 class="section-title">Exam Reult</h3>
+                    <h3 class="section-title">Exam Result</h3>
                     <span class="underline left"></span>
                     <p>
                         <table class="table table-bordered table-hover">

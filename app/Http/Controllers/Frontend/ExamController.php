@@ -74,7 +74,7 @@ class ExamController extends Controller
         $res->no_ans=$no;
         
         $res->save();
-        return redirect('/MyExamResult')->with('success','Thaks For Join This Exam');
+        return redirect('/MyExamResult')->with('success','Thanks For Join This Exam');
 
     }
     

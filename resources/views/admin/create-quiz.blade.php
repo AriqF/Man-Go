@@ -62,7 +62,6 @@
                             <th>Description</th>
                             <th>Time</th>
                             <th>Num of Exam Qus</th>
-                            <th>Status</th>
                             <th>Add Question</th>
                             <th>Details</th>
                             <th>Edit</th>
@@ -77,7 +76,6 @@
                             <td>{{$data->description}} </td>
                             <td>{{$data->quiz_time}} </td>
                             <td>{{$data->number_of_question}} </td>
-                            <td><input type="checkbox" name="status" class="quiz-status" data_id="{{$data->id}}" {{$data->status=='1'?'checked':''}}> </td>
                             <td><a href="/quize/addquestion/{{$data->id}}"><i class="fas fa-plus-square cfont-add" ></i></a> </td>
                             <td><a href="/quizes/{{$data->id}}"><i class="fas fa-info-circle cfont-info" ></i></a></td>
                             <td><a href="{{url('/quizes/quiz-edit',$data->id)}}"><i class="fas fa-edit cfont-edit"></i> </a></td>

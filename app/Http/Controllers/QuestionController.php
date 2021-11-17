@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Quizes;
 use App\Models\Questions;
 use App\Models\Options;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class QuestionController extends Controller
 {
@@ -49,7 +50,7 @@ class QuestionController extends Controller
     {
         $data=Questions::find($id);
         $quiz=Quizes::all();
-        return view('question.edit',compact('data','quiz'));
+        return view('question.edit-question',compact('data','quiz'));
     }
 
     
@@ -72,12 +73,14 @@ class QuestionController extends Controller
                 $dbazar->update($datad);
             }
         }
-        return redirect()->back()->with('success','Data update successfully');  
+        return redirect('/questions')->with('success','Data update successfully');  
     }
 
-    
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $data=Questions::find($id);
+        $data->delete();
+        Alert::success('Berhasil!', 'Data berhasil dihapus');
+        return redirect('/questions');
     }
 }

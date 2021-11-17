@@ -80,8 +80,8 @@
                             <td><input type="checkbox" name="status" class="quiz-status" data_id="{{$data->id}}" {{$data->status=='1'?'checked':''}}> </td>
                             <td><a href="/quize/addquestion/{{$data->id}}"><i class="fas fa-plus-square cfont-add" ></i></a> </td>
                             <td><a href="/quizes/{{$data->id}}"><i class="fas fa-info-circle cfont-info" ></i></a></td>
-                            <td><a href="/quizes/{{$data->id}}/edit"><i class="fas fa-edit cfont-edit"></i> </a></td>
-                            <td><a href="#"><i class="fas fa-minus-square cfont-delete"></i></a></td>
+                            <td><a href="{{url('/quizes/quiz-edit',$data->id)}}"><i class="fas fa-edit cfont-edit"></i> </a></td>
+                            <td><a href={{"delete/".$data['id']}}><i class="fas fa-minus-square cfont-delete"></i></a></td>
                         </tr>
                         @endforeach
                     </tbody>

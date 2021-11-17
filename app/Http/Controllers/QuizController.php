@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Quizes;
 use App\Models\Questions;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class QuizController extends Controller
 {
@@ -26,6 +27,7 @@ class QuizController extends Controller
     public function create()
     {
         $quizes=Quizes::orderBy('id','desc')->paginate(50);
+        $quiz=Quizes::all();
         return view('admin.create-quiz',compact('quizes'));
     }
 
@@ -65,9 +67,11 @@ class QuizController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function edit($id)
     {
-        //
+        $data=Quizes::find($id);
+        return view('admin.edit-quiz',compact('data'));
     }
 
     /**
@@ -79,7 +83,11 @@ class QuizController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data=Quizes::find($id);
+        $new_data=$request->all();
+        $data->update($new_data);
+
+        return redirect('/quizes/create')->with('success','Quiz update successfully');  
     }
 
     /**
@@ -102,13 +110,17 @@ class QuizController extends Controller
     }
     public function AddQuestion($id)
     {
-        $quizId=Quizes::find($id);
-        return view('question.add_question',compact('quizId'));
+        
+        $quiz=Quizes::all();
+        return view('question.add_question',compact('quiz'));
 
     }
 
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $data=Quizes::find($id);
+        $data->delete();
+        Alert::success('Berhasil!', 'Quiz berhasil dihapus');
+        return redirect('/quizes/create');
     }
 }

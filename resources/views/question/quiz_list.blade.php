@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="col-xl-8 col-md-12">
-                    @foreach($quizes->sortBy('created_at') as $key=>$quz)
+                    @foreach($quizes->sortBy('id') as $key=>$quz)
                         {{-- {{++$key}} --}}
                         <div class="box-container" id="ka1">
                             <div class="row">

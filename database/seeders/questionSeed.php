@@ -14,6 +14,45 @@ class questionSeed extends Seeder
      */
     public function run()
     {
+        /*********Hira I*********/
+        DB::table('questions')->insert([
+            'quizes_id' => '1',
+            'question' => 'くるま：＿＿＿＿',
+            'answer' => 'Kuruma',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('questions')->insert([
+            'quizes_id' => '1',
+            'question' => 'とうきょ：＿＿＿＿',
+            'answer' => 'Toukyo',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('questions')->insert([
+            'quizes_id' => '1',
+            'question' => 'えんぴつ：＿＿＿＿',
+            'answer' => 'Enpitsu',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('questions')->insert([
+            'quizes_id' => '1',
+            'question' => 'とけい：＿＿＿＿＿',
+            'answer' => 'Tokei',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('questions')->insert([
+            'quizes_id' => '1',
+            'question' => 'いっぱい：＿＿＿＿',
+            'answer' => 'Ippai',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+
+        /*********Hira II*********/
         DB::table('questions')->insert([
             'quizes_id' => '2',
             'question' => 'おはようございます、おじいさん：_____________',

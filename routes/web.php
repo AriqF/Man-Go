@@ -141,6 +141,6 @@ Route::get('/exam-start/{id}','App\Http\Controllers\Frontend\ExamController@exam
 
 Route::post('/exams','App\Http\Controllers\Frontend\ExamController@examPost');
 Route::get('/MyExamResult','App\Http\Controllers\Frontend\ExamController@examResult');
-Route::get('/profile','App\Http\Controllers\Frontend\ExamController@examResult');
+Route::get('/examresult','App\Http\Controllers\Frontend\ExamController@examResult');
 
 Route::get('/MyExamDetails/{id}', 'App\Http\Controllers\Frontend\ExamController@ResultDetails');

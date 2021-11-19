@@ -104,6 +104,12 @@ table img:hover{
     color: #da5e0b;
     background-color: #ffdfc2;
 }
+#quiz-info-box h3{
+    margin-bottom: 14px;
+}
+#quiz-info-box p{
+    margin-bottom: 6px;
+}
 /* responsive settings */
 @media (min-width: 200px) and (max-width: 767px){
     .page-section{

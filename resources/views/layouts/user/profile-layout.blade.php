@@ -34,7 +34,7 @@
             <div class="row">
                 {{-- list menu --}}
                 <div class="col-xl-4 col-md-12">
-                    <div class="box-container" id="profile-container">
+                    <div class="box-container fadeInDown" id="profile-container">
                         <div class="d-flex flex-column bd-highlight align-items-center" style="margin-bottom: 0 !important">
                             <div class=" bd-highlight">
                                 <form action="{{ route('user.update') }}" method="POST" enctype="multipart/form-data">
@@ -52,7 +52,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box-container" id="profile-menu">
+                    <div class="box-container fadeInUp" id="profile-menu">
                         <ul class="list-group" id="profile-menu-list">
                             <li class="list-group-item border-bottom-only "><a href="{{ url('/profile') }}" class="profile-link {{ (request()->is('profile')) ? 'menu-active' : '' }}"><i class="fas fa-user-cog"></i> Profil</a></li>
                             <li class="list-group-item border-bottom-only "><a href="{{ url('/change-password') }}" class="profile-link {{ (request()->is('change-password')) ? 'menu-active' : '' }}"><i class="fas fa-unlock"></i> Ubah Kata Sandi</a></li>

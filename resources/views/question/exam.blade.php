@@ -20,21 +20,23 @@
         <div class="page-section ">
             <div class="row container-fluid">
                 <div class="col-xl-4 col-md-12">
-                    <div class="box-container">
-                        <h4>{{$quiz->quiz_name}}</h4>
-                        <p>Exam Time:    &nbsp; <span class="js-timeout" >{{$quiz->quiz_time}}</span> </p>                            
+                    <div class="box-container fadeInDown " id="quiz-info-box">
+                        <h3>{{$quiz->quiz_name}}</h3>
+                        <p>Petunjuk: {{$quiz->description}}</p>
+                        <p>Waktu Quiz:    &nbsp; <span class="js-timeout" >{{$quiz->quiz_time}}</span> </p>  
+                        <p>Jumlah Soal: {{$quiz->number_of_question}}</p>                          
                     </div>
-                    <div class="box-container">
+                    <div class="box-container fadeInUp" >
                         <div class="d-flex flex-wrap">          
                             @foreach ($questions as $key=>$ques)
-                                <a href="#q{{$key+1}}" class="box-num" id="boxNum{{$key+1}}"><span>{{$key+1}}</span></a>
+                                <a href="#q{{$key}}" class="box-num" id="boxNum{{$key+1}}"><span>{{$key+1}}</span></a>
                             @endforeach 
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-8 col-md-12">
                     {{--container materi--}}
-                    <div class="box-container" id="hi1">
+                    <div class="box-container fadeInLeft" id="hi1">
                         <div class="row">
                             <div class="col-md-12">
                                 <section class=" " oncopy="return false;" oncut="return false;" onpaste="return false;" oncontextmenu="return false;">

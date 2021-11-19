@@ -1,4 +1,7 @@
 /* button utility */
+html{
+    scroll-behavior: smooth;
+}
 .btnr{
     padding: 8px 26px;
     font-family: 'Poppins', sans-serif;
@@ -82,4 +85,74 @@
 /* background */
 .bg-custom-dark{
     background-color: #2C394B !important;
+}
+
+/* animation */
+.fadeInRight{
+    animation: fadeInRight 1s ease;
+}
+.fadeInLeft{
+    animation: fadeInLeft 1s ease;
+}
+.fadeInUp{
+    animation: fadeInUp 1s ease;
+}
+.fadeInDown{
+    animation: fadeInDown 1s ease;
+}
+.slideBoxAnim{
+    animation: slideBox 3s ease;
+  }
+@keyframes slideBox{
+    0%{
+        opacity: 0;
+        width: 50%;
+    }
+    100%{
+        opacity: 1;
+        width: 100%;
+    }
+}
+@keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-40px);
+       
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes fadeInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(40px);
+       
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }

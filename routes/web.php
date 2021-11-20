@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RatingsController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UpdateProfileInformationController;
 use App\Models\User;
@@ -84,6 +85,13 @@ Route::put('update', [App\Http\Controllers\UpdateProfileInformationController::c
 // Route::put('update', [App\Http\Controllers\UpdateProfileInformationController::class, 'updateadmin'])->name('admin.update');
 // feedback user
 Route::get('feedback', [App\Http\Controllers\HomeController::class, 'feedback'])->name('feedback');
+Route::match(['GET','POST'],'/rating','App\Http\Controllers\Frontend\RatingController@addRating');
+// Route::match(['GET','POST'], 'rating', [App\Http\Controllers\Frontend\RatingController::class, 'addRating'])->name('rating');
+
+// reviews user
+Route::get('reviews', [App\Http\Controllers\HomeController::class, 'ratingStar'])->name('reviews');
+// Route::get('reviews','App\Http\Controllers\Frontend\RatingController@ratingStar')->name('reviews');
+
 // change password user
 Route::get('change-password', [App\Http\Controllers\HomeController::class, 'change_password'])->name('change-password');
 // Hiragana user
@@ -103,7 +111,9 @@ Route::get('admin-profile', [App\Http\Controllers\HomeController::class, 'admin_
 Route::get('change-admin-password', [App\Http\Controllers\HomeController::class, 'change_admin_password'])->name('change-admin-password')->middleware('is_admin');
 
 // Admin change password
-Route::get('rating-data', [App\Http\Controllers\HomeController::class, 'rating_data'])->name('rating-data')->middleware('is_admin');
+// Route::get('rating-data', [App\Http\Controllers\HomeController::class, 'rating_data'])->name('rating-data')->middleware('is_admin');
+Route::get('rating-data', [App\Http\Controllers\RatingsController::class, 'ratings'])->name('rating-data')->middleware('is_admin');
+Route::post('update-rating-data',[App\Http\Controllers\RatingsController::class, 'updateRatingStatus'])->name('update-rating-data')->middleware('is_admin');
 
 //Create User
 Route::get('user-data',[App\Http\Controllers\UserController::class, 'user_data'])->name('admin.user-data')->middleware('is_admin');
@@ -144,3 +154,11 @@ Route::get('/MyExamResult','App\Http\Controllers\Frontend\ExamController@examRes
 Route::get('/examresult','App\Http\Controllers\Frontend\ExamController@examResult');
 
 Route::get('/MyExamDetails/{id}', 'App\Http\Controllers\Frontend\ExamController@ResultDetails');
+
+
+// Ratings
+// Route::get('ratings-data', [App\Http\Controllers\RatingsController::class, 'ratings'])->name('ratings-data')->middleware('is_admin');
+// Route::get('ratings','RatingsController@ratings');
+// Route::post('update-ratings','RatingsController@updateRatingStatus');
+
+

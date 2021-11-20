@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use GrahamCampbell\ResultType\Success;
+use App\Http\Controllers\Controller;
+use App\Models\Rating;
+use Illuminate\Contracts\Session\Session;
+use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
 {
@@ -74,5 +80,17 @@ class HomeController extends Controller
     public function rating_data()
     {
         return view('admin.rating-data');
+    }
+    public function ratingStar(){
+        $ratings = Rating::with(['user'])->where('status',1)->orderBy('id','desc')->get()->toArray();
+
+        // Ambil Rerata dari rating
+        $ratingSum = Rating::where('status',1)->sum('rating');
+        $ratingCount = Rating::where('status',1)->count();
+        $ratingAvg = round($ratingSum/$ratingCount,2);
+
+        $avgStarRating = round($ratingSum/$ratingCount);
+
+        return view('user.reviews')->with(compact('ratings','avgStarRating','ratingAvg'));
     }
 }

@@ -6,18 +6,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            {{-- <li class="nav-item active">
                 <a class="nav-link" href="/">Beranda</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Aksi I</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Aksi II</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Aksi III</a>
-            </li>
+            </li> --}}
         </ul>
         <ul class="navbar-nav ml-auto">
             @if (Route::has('login'))
@@ -54,5 +48,8 @@
     {{-- anime js --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

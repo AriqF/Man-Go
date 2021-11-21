@@ -18,6 +18,10 @@ html{
 .nav-link{
     font-size: 18px;
 }
+.navbar-nav, .navbar-brand{
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .page-section{
     background-color: #FBFCFE;
     color: #000;

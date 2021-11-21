@@ -27,7 +27,7 @@
             <h2>Siap Belajar di ManGo?</h2>
             <div class="info-sub-container">
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-xs-12 info-box">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-xs-12 info-box" data-aos="fade-up" data-aos-duration="1000">
                         <div class="info-img-container" id="img1">
                             <img src="{{asset('img/progress.png')}}" class="img-fluid">
                         </div>
@@ -36,7 +36,7 @@
                             <p>Lacak dan ketahui perkembangan belajar-mu melalui grafik interaktif</p>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-xs-12 info-box">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-xs-12 info-box" data-aos="fade-up" data-aos-duration="1100">
                         <div class="info-img-container" id="img2">
                             <img src="{{asset('img/anywhere.png')}}" class="img-fluid">
                         </div>
@@ -46,7 +46,7 @@
                         </div>
 
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-xs-12 info-box" >
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-xs-12 info-box" data-aos="fade-up" data-aos-duration="1200">
 
                        <div class=" info-img-container" id="img3">
                             <img src="{{asset('img/free.png')}}" class="img-fluid">

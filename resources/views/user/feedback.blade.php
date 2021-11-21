@@ -4,48 +4,6 @@
 @section('title', 'ManGo - Feedback')
 {{-- content --}}
 
-<style>
-    *{
-    margin: 0;
-    padding: 0;
-}
-.rate {
-    float: left;
-    height: 46px;
-    padding: 0 10px;
-}
-.rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
-}
-.rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
-}
-.rate:not(:checked) > label:before {
-    content: '★ ';
-}
-.rate > input:checked ~ label {
-    color: #ffc700;
-}
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-    color: #deb217;
-}
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
-    color: #c59b08;
-}
-</style>
-
 <div class="col-xl-8 col-md-12">
     <div class="box-container">
         <form method="POST" action="{{ url('/rating') }}">
@@ -86,19 +44,23 @@
                             </div> --}}
 
             {{-- <input id="input-id" type="text" class="rating custom-control-input" data-size="sm"> --}}
-
-            <div class="rate">
-                <input type="radio" id="star5" name="rating" value="5" />
-                <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rating" value="4" />
-                <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rating" value="3" />
-                <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rating" value="2" />
-                <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rating" value="1" />
-                <label for="star1" title="text">1 star</label>
+            <div class="row">
+                <div class="col-12">
+                    <div class="rate">
+                        <input type="radio" id="star5" name="rating" value="5" />
+                        <label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4" name="rating" value="4" />
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3" name="rating" value="3" />
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2" name="rating" value="2" />
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label for="star1" title="text">1 star</label>
+                    </div>
+                </div>
             </div>
+
 
             {{-- <label class="form-label" for="feed_category" style="font-size: 16px; margin-top: 8px;">Pilih kategori feedback</label>
                             <div class="input-group mb-3" id="feed_category">
@@ -112,7 +74,7 @@
                                   <option value="3">Lainnya</option>
                                 </select>
                             </div> --}}
-
+            
             <label class="form-label" for="user_feedback" style="font-size: 16px; margin-top: 8px;">Komentar</label>
             <textarea required id="user_feedback" type="text" class="form-control" name="user_feedback" rows="4"></textarea>
 

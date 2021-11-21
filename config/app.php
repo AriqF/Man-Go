@@ -161,12 +161,16 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        
 
         /*
          * Package Service Providers...
          */
         //Sweet alert
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+
+        /* Chartjs */
+        Fx3costa\LaravelChartJs\Providers\ChartjsServiceProvider::class,
 
 
 
@@ -192,7 +196,7 @@ return [
     | the aliases are "lazy" loaded so they don't hinder performance.
     |
     */
-
+    
     'aliases' => [
 
         'App' => Illuminate\Support\Facades\App::class,

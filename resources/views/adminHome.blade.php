@@ -13,11 +13,11 @@
               <div class="card-body">
                   <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> Data I</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">Data Value</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Registered User</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$userCount}}</div>
                       </div>
                       <div class="col-auto">
-                        <i class="fas fa-database fa-2x"></i>
+                        <i class="fas fa-user-check fa-2x"></i>
                       </div>
                   </div>
               </div>
@@ -29,11 +29,11 @@
               <div class="card-body" >
                   <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> Data II</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">Data Value</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> Total User Rated</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$ratingCount}}</div>
                       </div>
                       <div class="col-auto">
-                        <i class="fas fa-database fa-2x"></i>
+                        <i class="fa fa-bar-chart fa-2x"></i>
                       </div>
                   </div>
               </div>
@@ -45,11 +45,11 @@
               <div class="card-body" >
                   <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Data III</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">Data Value</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Average User Rate</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$avgRating}}</div>
                       </div>
                       <div class="col-auto">
-                        <i class="fas fa-database fa-2x"></i>
+                        <i class="fas fa-star-half-alt fa-2x"></i>
                       </div>
                   </div>
               </div>
@@ -61,21 +61,41 @@
               <div class="card-body" >
                   <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> Data IV</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">Data Value</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Quizes Active</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$quizesCount}}</div>
                       </div>
                       <div class="col-auto">
-                        <i class="fas fa-database fa-2x"></i>
+                        <i class="fas fa-book fa-2x"></i>
                       </div>
                   </div>
               </div>
           </div>
       </div>
+      {{-- end card row --}}
     </div>
 
-
+    {{-- <div class="box-container ">
+      <canvas class="w-100" id="XPChart" width="max-content" height="max-content"></canvas>
+    </div> --}}
+    <div class="row " >
+      <div class="col-xl-6 d-flex justify-content-center">
+        <div style="width:60%;">
+          {{$userChart->render()}}
+        </div>
+      </div>
+      <div class="col-xl-6 d-flex justify-content-center">
+        <div style="width:60%;">
+          {{$ratingChart->render()}}
+        </div>
+      </div>
+    </div>
 
   </div>
-  
+
+  <script>
+    window.onload = function() {
+      console.log("quis " + {{$quizesCount}})
+    };  
+  </script>
 @endsection
  

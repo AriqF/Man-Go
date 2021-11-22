@@ -94,10 +94,14 @@ Route::get('reviews', [App\Http\Controllers\HomeController::class, 'ratingStar']
 
 // change password user
 Route::get('change-password', [App\Http\Controllers\HomeController::class, 'change_password'])->name('change-password');
-// Hiragana user
+// Hiragana 
 Route::get('hiragana', [App\Http\Controllers\HomeController::class, 'hiragana'])->name('hiragana');
-// Hiragana user
+// Katakana 
 Route::get('katakana', [App\Http\Controllers\HomeController::class, 'katakana'])->name('katakana');
+// Meet 
+Route::get('meet', [App\Http\Controllers\HomeController::class, 'meet'])->name('meet');
+// Food 
+Route::get('food', [App\Http\Controllers\HomeController::class, 'food'])->name('food');
 
 // ------------------------------------  ADMIN ------------------------------------ //
 

@@ -111,12 +111,21 @@ class HomeController extends Controller
 
     public function hiragana()
     {
-        return view('user.hiragana');
+        return view('user.learn.hiragana');
     }
 
     public function katakana()
     {
-        return view('user.katakana');
+        return view('user.learn.katakana');
+    }
+
+    public function meet()
+    {
+        return view('user.learn.meet');
+    }
+
+    public function food(){
+        return view ('user.learn.food');
     }
 
     public function admin_profile()

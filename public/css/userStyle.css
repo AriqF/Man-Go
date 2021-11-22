@@ -121,6 +121,17 @@ table img{
 table img:hover{
     transform: scale(1.14);
 }
+.dialogue-jp{
+    font-size: 18px;
+    margin-top: 16px !important;
+    margin-bottom: 4px !important;
+}
+.table-vocab{
+    margin-top: 18px;
+}
+.table-vocab tbody tr td:nth-child(1), .table-vocab tbody tr td:nth-child(2){
+    font-size: 16px !important;
+}
 /* quiz page */
 .box-num{
     padding: 12px 14px;

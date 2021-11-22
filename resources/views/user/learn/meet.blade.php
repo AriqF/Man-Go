@@ -30,9 +30,9 @@
                             </thead>
                             <tbody>
                               <tr>
-                                <td>すみません</td>
+                                <td>こんにちは</td>
                                 <td></td>
-                                <td>Permisi</td>
+                                <td>Hai/Halo/Selamat siang</td>
                               </tr>
                               <tr>
                                 <td>はじめまして</td>

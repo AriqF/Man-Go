@@ -144,6 +144,16 @@ table img:hover{
 #quiz-info-box p{
     margin-bottom: 6px;
 }
+#exam-result h4{
+    margin-bottom: 14px;
+}
+#exam-result p{
+    margin-top: 0px !important;
+    margin-bottom: 6px !important;
+    font-weight: 400;
+    font-size: 16px;
+}
+
 /* responsive settings */
 @media (min-width: 200px) and (max-width: 767px){
     .page-section{

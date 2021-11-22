@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html translate="no" lang="ja">
     <head>
         @section('title', 'ManGo - Belajar Bahasa Jepang')
         @extends('layouts.index-master')

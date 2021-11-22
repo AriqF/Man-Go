@@ -59,8 +59,8 @@ class HomeController extends Controller
         ->labels(['1 Star', '2 Stars', '3 Stars', '4 Stars', '5 Stars'])
         ->datasets([
             [
-                'backgroundColor' => ['#F8073E', '#F807D7', '#B007F8', '#079FF8', '#07F852' ],
-                'hoverBackgroundColor' => ['#F8073E', '#F807D7', '#B007F8', '#079FF8', '#07F852' ],
+                'backgroundColor' => ['#EA5455', '#D939CD', '#9708CC', '#454acc', '#32CCBC' ],
+                'hoverBackgroundColor' => ['#EA5455', '#D939CD', '#9708CC', '#454acc', '#32CCBC' ],
                 'data' => [$rate1, $rate2, $rate3, $rate4, $rate5]
             ]
         ])
@@ -75,8 +75,8 @@ class HomeController extends Controller
         ->labels(['Users', 'Admins'])
         ->datasets([
             [
-                'backgroundColor' => ['#5f59f7', '#343090' ],
-                'hoverBackgroundColor' => ['#5f59f7', '#343090' ],
+                'backgroundColor' => ['#454acc', '#30348f' ],
+                'hoverBackgroundColor' => ['#454acc', '#30348f' ],
                 'data' => [$userCount, $adminCount]
             ]
         ])

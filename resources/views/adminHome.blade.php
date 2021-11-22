@@ -77,7 +77,7 @@
     {{-- <div class="box-container ">
       <canvas class="w-100" id="XPChart" width="max-content" height="max-content"></canvas>
     </div> --}}
-    <div class="row " >
+    <div class="row" style="margin-top: 30px">
       <div class="col-xl-6 d-flex justify-content-center">
         <div style="width:60%;">
           {{$userChart->render()}}

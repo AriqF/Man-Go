@@ -1,41 +1,42 @@
 @extends('layouts.user.homeLayout')
 @section('main-content')
-    <div class="box-container" id="exam-result">
-        @foreach($results as $key=>$res)
-            <h2 class="section-title">Hasil Quiz {{$res->quizes->quiz_name}}</h3>
-            <hr>
-            @if ($res->yes_ans/($res->yes_ans+$res->no_ans)*100 == 100)
-                <h4>Sempurna! Kamu mendapatkan {{$res->yes_ans}} dari {{$res->yes_ans+$res->no_ans}} </h4>
-                <p class="exam-comment">Tetap pertahankan kinerja-mu!</p>
-                <script>
-                    var element = document.getElementById("exam-result");
-                    element.classList.add("bg-score-high");
-                </script>
-            @elseif($res->yes_ans/($res->yes_ans+$res->no_ans)*100 >= 75)
-                <h4>Sedikit Lagi! Kamu mendapatkan {{$res->yes_ans}} dari {{$res->yes_ans+$res->no_ans}} </h4>
-                <p class="exam-comment">Ayo Mango yakin kamu pasti bisa!</p>
-                <script>
-                    var element = document.getElementById("exam-result");
-                    element.classList.add("bg-score-mid");
-                </script>
-            @elseif($res->yes_ans/($res->yes_ans+$res->no_ans)*100 < 75)
-                <h4>Sayang sekali, Kamu mendapatkan {{$res->yes_ans}} dari {{$res->yes_ans+$res->no_ans}} </h4>
-                <p class="exam-comment">Teruslah berlatih yaa</p>  
-                <script>
-                    var element = document.getElementById("exam-result");
-                    element.classList.add("bg-score-low");
-                </script>
-            @else
-                <p>Error Occured! Skor 404</p>
-            @endif
-            
-            <p style="margin-bottom: 20px !important">Skor kamu: {{$res->yes_ans/($res->yes_ans+$res->no_ans)*100}}</p>
+    @foreach($results as $key=>$res)
+    <div class="box-container boxScore" id="exam-result{{$key}}">
+        <h2 class="section-title">Hasil Quiz {{$res->quizes->quiz_name}}</h3>
+        <hr>
+        @if ($res->yes_ans/($res->yes_ans+$res->no_ans)*100 == 100)
+            <h4>Sempurna! Kamu mendapatkan {{$res->yes_ans}} dari {{$res->yes_ans+$res->no_ans}} </h4>
+            <p class="exam-comment">Tetap pertahankan kinerja-mu!</p>
+            <script>
+                var element = document.getElementById("exam-result"+{{$key}});
+                element.classList.add("bg-score-high");
+            </script>
+        @elseif($res->yes_ans/($res->yes_ans+$res->no_ans)*100 >= 75)
+            <h4>Sedikit Lagi! Kamu mendapatkan {{$res->yes_ans}} dari {{$res->yes_ans+$res->no_ans}} </h4>
+            <p class="exam-comment">Ayo Mango yakin kamu pasti bisa!</p>
+            <script>
+                var element = document.getElementById("exam-result"+{{$key}});
+                element.classList.add("bg-score-mid");
+            </script>
+        @elseif($res->yes_ans/($res->yes_ans+$res->no_ans)*100 < 75)
+            <h4>Sayang sekali, Kamu mendapatkan {{$res->yes_ans}} dari {{$res->yes_ans+$res->no_ans}} </h4>
+            <p class="exam-comment">Teruslah berlatih yaa</p>  
+            <script>
+                var element = document.getElementById("exam-result"+{{$key}});
+                element.classList.add("bg-score-low");
+            </script>
+        @else
+            <p>Error Occured! Skor 404</p>
+        @endif
+        
+        <p style="margin-bottom: 20px !important">Skor kamu: {{$res->yes_ans/($res->yes_ans+$res->no_ans)*100}}</p>
 
 
-            <a href="/MyExamDetails/{{$res->quizes_id}}" class="btnr btn-trans" >Jawaban Saya</a>
-        @endforeach
+        <a href="/MyExamDetails/{{$res->quizes_id}}" class="btnr btn-trans" >Jawaban Saya</a>
+
         {{-- <a href="/quiz" class="btn btn-dark-gray">Today Exam</a> --}}
-    </div>     
+    </div>  
+    @endforeach   
 
 @endsection
 

@@ -46,9 +46,10 @@ html{
     background-color:  rgba(255, 255, 255, 0.6);
     border: 1px solid #ECEBEB;
     color: inherit;
+    transition: 0.2s background-color ease-in-out;
 }
 .btn-trans:hover{
-    background-color:  rgba(255, 255, 255, 0.75);
+    background-color:  rgba(255, 255, 255, 0.85);
     color: inherit;
 }
 
@@ -96,16 +97,16 @@ html{
     background-color: #2C394B !important;
 }
 .bg-score-high{
-    background: linear-gradient(to bottom, rgba(28, 255, 116, 0.1), rgba(28, 255, 116, 0.65));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(28, 255, 116, 0.65));
     color: #444745;
 }
 .bg-score-mid{
     /* background-color: #ffff4d !important; */
-    background: linear-gradient(to bottom, rgba(255, 255, 77, 0.1), rgba(255, 255, 77, 0.65));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 77, 0.65));
     color: #444745;
 }
 .bg-score-low{
-    background: linear-gradient(to bottom, rgba(249, 109, 30, 0.1), rgba(249, 109, 30, 0.65));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(249, 109, 30, 0.65));
     color: #444745;
 }
 

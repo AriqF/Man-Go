@@ -123,5 +123,86 @@ class questionSeed extends Seeder
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
+
+        /*********Kata I*********/
+        DB::table('questions')->insert([
+            'quizes_id' => '3',
+            'question' => 'サラダ：＿＿＿＿',
+            'answer' => 'Sarada',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('questions')->insert([
+            'quizes_id' => '3',
+            'question' => 'アイスクリーム：＿＿＿＿',
+            'answer' => 'Aisukurīmu',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('questions')->insert([
+            'quizes_id' => '3',
+            'question' => 'ハンバガ：＿＿＿＿',
+            'answer' => 'Hanbaga',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('questions')->insert([
+            'quizes_id' => '3',
+            'question' => 'フライドポテト：＿＿＿＿',
+            'answer' => 'Furaidopoteto',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('questions')->insert([
+            'quizes_id' => '3',
+            'question' => 'エスカレーター：＿＿＿＿',
+            'answer' => 'Esukarētā',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+
+        /*********Kata II*********/
+        DB::table('questions')->insert([
+            'quizes_id' => '4',
+            'question' => 'Makudonarudo: ＿＿＿＿',
+            'answer' => 'マクドナルド',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('questions')->insert([
+            'quizes_id' => '4',
+            'question' => 'Shatsu: ＿＿＿＿',
+            'answer' => 'シャツ',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('questions')->insert([
+            'quizes_id' => '4',
+            'question' => 'Kōhī: ______',
+            'answer' => 'コーヒー',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('questions')->insert([
+            'quizes_id' => '4',
+            'question' => 'Kēki: _______',
+            'answer' => 'ケーキ',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('questions')->insert([
+            'quizes_id' => '4',
+            'question' => 'Arukōru: ＿＿＿＿',
+            'answer' => 'アルコール',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+
+
+
+
+
     }
 }

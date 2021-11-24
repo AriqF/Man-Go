@@ -398,6 +398,259 @@ class optionSeed extends Seeder
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
+
+
+        DB::table('options')->insert([
+            'questions_id' => '16',
+            'option' => 'Sarada',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '16',
+            'option' => 'Salada',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '16',
+            'option' => 'Sarata',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '16',
+            'option' => 'Saragu',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('options')->insert([
+            'questions_id' => '17',
+            'option' => 'Aisukurīmu',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '17',
+            'option' => 'Aisukurīma',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '17',
+            'option' => 'Aisutarīmu',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '17',
+            'option' => 'Aisutarīma',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('options')->insert([
+            'questions_id' => '18',
+            'option' => 'Hanbaga',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '18',
+            'option' => 'Hanpaga',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '18',
+            'option' => 'Hanbaka',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '18',
+            'option' => 'Banpaga',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
         
+
+        DB::table('options')->insert([
+            'questions_id' => '19',
+            'option' => 'Furaidopoteto',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '19',
+            'option' => 'Furaidobochito',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '19',
+            'option' => 'Furaidopochito',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '19',
+            'option' => 'Furaidoboteto',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+
+        DB::table('options')->insert([
+            'questions_id' => '20',
+            'option' => 'Esukarētā',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '20',
+            'option' => 'Isukarētā',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '20',
+            'option' => 'Esukarēku',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '20',
+            'option' => 'Isukarēku',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+
+        DB::table('options')->insert([
+            'questions_id' => '21',
+            'option' => 'マクドナルド',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '21',
+            'option' => 'ムクドナレド　',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '21',
+            'option' => 'マタドナルド',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '21',
+            'option' => 'マクトナレド',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('options')->insert([
+            'questions_id' => '22',
+            'option' => 'シャツ',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '22',
+            'option' => 'ツヤシ',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '22',
+            'option' => 'シャツウ',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '22',
+            'option' => 'シヤツ',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('options')->insert([
+            'questions_id' => '23',
+            'option' => 'コーヒー',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '23',
+            'option' => 'コーピー',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '23',
+            'option' => 'ゴーヒー',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '23',
+            'option' => 'コービー',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('options')->insert([
+            'questions_id' => '24',
+            'option' => 'ケーキ',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '24',
+            'option' => 'クーキ',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '24',
+            'option' => 'ケーギ',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '24',
+            'option' => 'クーギ',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('options')->insert([
+            'questions_id' => '25',
+            'option' => 'アルコール',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '25',
+            'option' => 'アレゴール',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '25',
+            'option' => 'イルコール',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('options')->insert([
+            'questions_id' => '25',
+            'option' => 'アルコル',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
     }
 }

@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        @section('title', 'ManGo - Belajar Bahasa Jepang')
+        @section('title', 'ManGo - Quiz {{$quiz->quiz_name}}')
         @extends('layouts.index-master')
         <link rel="stylesheet" href="{{ asset('css/userStyle.css') }}" type="text/css"> 
         <link rel="stylesheet" href="{{ asset('css/utility.css') }}" type="text/css"> 
-        <style>
-            .disabled{
-                background-color: #d8d7d5;
-            }
-            .disabled:hover{
-                background-color: #d8d7d5;
-            }
-        </style>
-        
     </head>
     <body style="background-color: #f3f7f7">
         @extends('layouts.user.navLayouts')

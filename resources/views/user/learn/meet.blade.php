@@ -9,7 +9,7 @@
         @extends('layouts.user.navLayouts')
         <div class="page-section">
             <div class="row">
-                <div class="col-xl-4 col-md-12">
+                <div class="col-xl-5 col-md-12">
                     <div class="box-container">
                         <h3>Perkenalan diri (<ruby>自己紹介<rt>じこしょうかい</rt></ruby>)</h3>
                         <hr>
@@ -24,7 +24,7 @@
                             <thead class="thead-dark">
                               <tr>
                                 <th scope="col">ひらがな</th>
-                                <th scope="col">漢字</th>
+                                <th scope="col"><ruby>漢字<rt>かんじ</rt></ruby></th>
                                 <th scope="col">Bahasa</th>
                               </tr>
                             </thead>
@@ -88,7 +88,7 @@
                           </table>
                     </div>
                 </div>
-                <div class="col-xl-8 col-md-12">
+                <div class="col-xl-7 col-md-12">
                     <div class="box-container">
                         <h3>Memperkenalkan Diri</h3>
                         <hr>

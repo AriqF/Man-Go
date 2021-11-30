@@ -9,7 +9,7 @@
         @extends('layouts.user.navLayouts')
         <div class="page-section">
             <div class="row">
-                <div class="col-xl-4 col-md-12">
+                <div class="col-xl-5 col-md-12">
                     <div class="box-container">
                         <h3>Makanan (<ruby>食べ物<rt>た　もの</rt></ruby>)</h3>
                         <hr>
@@ -93,7 +93,7 @@
                           </table>
                     </div>
                 </div>
-                <div class="col-xl-8 col-md-12">
+                <div class="col-xl-7 col-md-12">
                     <div class="box-container">
                         <h3>Bertanya lokasi</h3>
                         <hr>
